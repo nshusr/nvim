@@ -420,9 +420,8 @@ The following is the key binding I set, translated from English to Chinese or Ch
 | Models | Keys        | Instructions                 | Plugins                                                                 |
 | ------ | ----------- | ---------------------------- | ----------------------------------------------------------------------- |
 | n      | gb          | Enable multi-cursor mode     | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;c-p&gt; | select previous word         | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;c-n&gt; | Cancel the current selection | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;c-b&gt; | skip current selection       | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
+| n      | &lt;c-n&gt; | select previous word         | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
+| n      | &lt;c-p&gt; | Cancel the current selection | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
 | n      | &lt;c-b&gt; | skip current selection       | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
 | n      | &lt;esc&gt; | Exit multi-cursor mode       | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
 

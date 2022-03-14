@@ -169,7 +169,7 @@ local packer_install_plugins = {
     -- key binder
     {"folke/which-key.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
     -- translation plugins
-    {"uga-rosa/translate.nvim", load_file = true, cmd = "Translate", disable = false},
+    {"uga-rosa/translate.nvim", load_file = true, cmd = "Translate", disable = false },
     -- long screenshot of the code
     {"kristijanhusak/vim-carbon-now-sh", cmd = "CarbonNowSh"},
     -- query the startup time

@@ -422,9 +422,8 @@ $ yay -S repgrep
 | 模式 | 键位        | 说明           | 插件                                                                    |
 | ---- | ----------- | -------------- | ----------------------------------------------------------------------- |
 | n    | gb          | 开启多光标模式 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;c-p&gt; | 选择上一个词汇 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;c-n&gt; | 取消当前选择   | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;c-b&gt; | 跳过当前选择   | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
+| n    | &lt;c-n&gt; | 选择下一个词汇 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
+| n    | &lt;c-p&gt; | 取消当前选择   | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
 | n    | &lt;c-b&gt; | 跳过当前选择   | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
 | n    | &lt;esc&gt; | 退出多光标模式 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
 

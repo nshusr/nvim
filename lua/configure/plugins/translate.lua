@@ -14,7 +14,7 @@ local options = {
         -- deepl_pro
         commond = "translate_shell",
         output = "floating"
-    },
+    }
 }
 
 require("translate").setup(options)

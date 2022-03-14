@@ -155,14 +155,14 @@ vim.u.keymap = {
             {"n", "<leader>ta", "<cmd>ToggleTermToggleAll<cr>", "ntst"}
         },
         translator = {
-            {"n", "<leader>tsc", ":<c-u>Translate ZH -output=split<cr>", "ntst"},
-            {"x", "<leader>tsc", ":Translate ZH -output=split<cr>", "ntst"},
-            {"n", "<leader>tse", ":<c-u>Translate EN -output=split<cr>", "ntst"},
-            {"x", "<leader>tse", ":Translate EN -output=split<cr>", "ntst"},
-            {"n", "<leader>trc", ":<c-u>Translate ZH -output=replace<cr>", "ntst"},
-            {"x", "<leader>trc", ":Translate ZH -output=replace<cr>", "ntst"},
-            {"n", "<leader>tre", ":<c-u>Translate EN -output=replace<cr>", "ntst"},
-            {"x", "<leader>tre", ":Translate EN -output=replace<cr>", "ntst"}
+            {"n", "<leader>tsc", ":<c-u>Translate ZH -source=EN -output=split<cr>", "ntst"},
+            {"x", "<leader>tsc", ":Translate ZH -source=EN -output=split<cr>", "ntst"},
+            {"n", "<leader>tse", ":<c-u>Translate EN -source=ZH -output=split<cr>", "ntst"},
+            {"x", "<leader>tse", ":Translate EN -source=ZH -output=split<cr>", "ntst"},
+            {"n", "<leader>trc", ":<c-u>Translate ZH -source=EN -output=replace<cr>", "ntst"},
+            {"x", "<leader>trc", ":Translate ZH -source=EN -output=replace<cr>", "ntst"},
+            {"n", "<leader>tre", ":<c-u>Translate EN -source=ZH -output=replace<cr>", "ntst"},
+            {"x", "<leader>tre", ":Translate EN -source=ZH -output=replace<cr>", "ntst"}
         }
     },
     buffer_mapping = {
