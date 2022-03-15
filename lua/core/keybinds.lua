@@ -31,7 +31,7 @@ vim.u.keymap = {
     },
     global_mapping = {
         baisc = {
-            {"n", "\\\\", "<cmd>qa<cr>", "ntst"},
+            {"n", "\\\\", "<cmd>qa!<cr>", "ntst"},
             {"n", "<esc>", ":nohlsearch<cr>", "ntst"},
             {"t", "<esc>", "<c-\\><c-n>", "ntst"},
             {"i", "jj", "<esc>", "ntst"},

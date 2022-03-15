@@ -3,8 +3,7 @@ M = {
 }
 
 -- packer
-
-M.packer.auto_install_packer = function()
+function M.packer.auto_install_packer()
     local packer_install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
     if vim.fn.empty(vim.fn.glob(packer_install_path)) > 0 then
         return vim.fn.system(

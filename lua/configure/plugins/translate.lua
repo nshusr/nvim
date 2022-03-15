@@ -12,8 +12,15 @@ local options = {
         -- default: translate_shell
         -- deepl_free
         -- deepl_pro
-        commond = "translate_shell",
+        command = "translate_shell",
         output = "floating"
+    },
+    preset = {
+        output = {
+            split = {
+                min_size = 10
+            }
+        }
     }
 }
 
