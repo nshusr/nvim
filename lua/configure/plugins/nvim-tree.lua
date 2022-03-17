@@ -50,7 +50,7 @@ vim.g.nvim_tree_icons = {
     }
 }
 
-require("nvim-tree").setup(options)
-
 -- add a backslash / after the directory
 vim.g.nvim_tree_add_trailing = 1
+
+require("nvim-tree").setup(options)

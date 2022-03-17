@@ -51,11 +51,11 @@ local packer_install_plugins = {
     -- git copilot is autocompleted
     {"github/copilot.vim", load_file = true, event = "InsertCharPre"},
     -- vsnip engine for code snippet support
-    {"hrsh7th/vim-vsnip", event = "InsertEnter"},
+    {"hrsh7th/vim-vsnip", event = {"InsertEnter", "CmdlineEnter"}},
     -- adds a vscode-like icon for completion
-    {"onsails/lspkind-nvim", event = "InsertEnter"},
+    {"onsails/lspkind-nvim", event = {"InsertEnter", "CmdlineEnter"}},
     -- code completion
-    {"hrsh7th/nvim-cmp", load_file = true, after = "lspkind-nvim"},
+    {"hrsh7th/nvim-cmp", load_file = true, after = {"lspkind-nvim", "vim-vsnip"}},
     -- source of code snippets for vsnip
     {"hrsh7th/cmp-vsnip", after = "nvim-cmp"},
     -- path completion

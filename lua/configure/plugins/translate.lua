@@ -18,7 +18,7 @@ local options = {
     preset = {
         output = {
             split = {
-                min_size = 10
+                min_size = 8
             }
         }
     }
