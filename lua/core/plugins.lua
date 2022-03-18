@@ -153,7 +153,7 @@ local packer_install_plugins = {
     -- built-in terminal
     {"akinsho/toggleterm.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
     -- multi-cursor mode
-    {"terryma/vim-multiple-cursors", load_file = true},
+    {"mg979/vim-visual-multi", load_file = true},
     -- auto save
     {"Pocco81/AutoSave.nvim", load_file = true, event = {"TextChanged", "TextChangedI"}},
     -- automatically restores the cursor position

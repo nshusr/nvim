@@ -225,8 +225,8 @@ I use a lot of plugins to make LSP as easy to use as possible, here are some key
 | n      | gh               | Get help information           | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | g[               | Jump to previous code question | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | g]               | Jump to next code question     | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n      | &lt;c-p&gt;      | page up                        | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n      | &lt;c-n&gt;      | page down                      | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n      | &lt;c-b&gt;      | page up                        | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n      | &lt;c-f&gt;      | page down                      | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | &lt;leader&gt;cn | variable renaming              | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | &lt;leader&gt;ca | Trigger code behavior          | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | i      | &lt;c-j&gt;      | View function signature        | [lsp_signature](https://github.com/ray-x/lsp_signature.nvim)  |
@@ -415,17 +415,17 @@ The following is the key binding I set, translated from English to Chinese or Ch
 
 ### Multi-cursor operation
 
-[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) plugin can provide multiple cursor operations for neovim, although it has been born for many years, but in some specific scenarios will still use it.
+The [vim-visual-multi](https://github.com/mg979/vim-visual-multi) plugin provides multi-cursor operations for neovim.
 
-| Models | Keys        | Instructions                 | Plugins                                                                 |
-| ------ | ----------- | ---------------------------- | ----------------------------------------------------------------------- |
-| n      | gb          | Enable multi-cursor mode     | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;c-n&gt; | select previous word         | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;c-p&gt; | Cancel the current selection | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;c-b&gt; | skip current selection       | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n      | &lt;esc&gt; | Exit multi-cursor mode       | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
+| Models | Keys        | Instructions             | Plugins                                                       |
+| ------ | ----------- | ------------------------ | ------------------------------------------------------------- |
+| n      | &lt;c-n&gt; | select next word         | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n      | &lt;c-p&gt; | Cancel current selection | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n      | &lt;c-s&gt; | Skip current selection   | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n      | &lt;esc&gt; | Exit multi-cursor mode   | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n      | &lt;tab&gt; | Toggle multi-cursor mode | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
 
-![Peek 2022-03-12 16-17](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121617865.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203181649057.gif)
 
 ### Range selection
 

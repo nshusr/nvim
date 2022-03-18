@@ -13,7 +13,9 @@ local options = {
         -- deepl_free
         -- deepl_pro
         command = "translate_shell",
-        output = "floating"
+        output = "floating",
+        parse_before = "trim",
+        parse_after = "no_handle",
     },
     preset = {
         output = {

@@ -227,8 +227,8 @@ $ yay -S xsel
 | n    | gh               | 获得帮助信息         | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | g[               | 跳转到上一个代码问题 | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | g]               | 跳转到下一个代码问题 | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n    | &lt;c-p&gt;      | 向上翻页             | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n    | &lt;c-n&gt;      | 向下翻页             | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n    | &lt;c-b&gt;      | 向上翻页             | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n    | &lt;c-f&gt;      | 向下翻页             | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | &lt;leader&gt;cn | 变量重命名           | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | &lt;leader&gt;ca | 触发代码行为         | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | i    | &lt;c-j&gt;      | 查看函数签名         | [lsp_signature](https://github.com/ray-x/lsp_signature.nvim)  |
@@ -417,17 +417,17 @@ $ yay -S repgrep
 
 ### 多光标操作
 
-[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) 插件能为 neovim 提供多光标操作，虽然诞生已经有很多年了，但是我在某些特定的场景下依然会使用它。
+[vim-visual-multi](https://github.com/mg979/vim-visual-multi) 插件能为 neovim 提供多光标操作。
 
 | 模式 | 键位        | 说明           | 插件                                                                    |
 | ---- | ----------- | -------------- | ----------------------------------------------------------------------- |
-| n    | gb          | 开启多光标模式 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;c-n&gt; | 选择下一个词汇 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;c-p&gt; | 取消当前选择   | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;c-b&gt; | 跳过当前选择   | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
-| n    | &lt;esc&gt; | 退出多光标模式 | [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) |
+| n    | &lt;c-n&gt; | 选择下一个词汇 | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n    | &lt;c-p&gt; | 取消当前选择   | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n    | &lt;c-s&gt; | 跳过当前选择   | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n    | &lt;esc&gt; | 退出多光标模式 | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
+| n    | &lt;tab&gt; | 切换多光标模式 | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
 
-![Peek 2022-03-12 16-17](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121617865.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203181649057.gif)
 
 ### 范围选择
 

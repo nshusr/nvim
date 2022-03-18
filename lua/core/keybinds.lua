@@ -173,8 +173,8 @@ vim.u.keymap = {
             {"n", "gh", "<cmd>Lspsaga hover_doc<CR>", "ntst"},
             {"n", "g[", "<cmd>Lspsaga diagnostic_jump_prev<CR>", "ntst"},
             {"n", "g]", "<cmd>Lspsaga diagnostic_jump_next<CR>", "ntst"},
-            {"n", "<c-p>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", "ntst"},
-            {"n", "<c-n>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", "ntst"},
+            {"n", "<c-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", "ntst"},
+            {"n", "<c-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", "ntst"},
             {"n", "<leader>ca", "<cmd>Telescope lsp_code_actions theme=dropdown<CR>", "ntst"},
             {"n", "<leader>cn", "<cmd>Lspsaga rename<CR>", "ntst"}
         },
@@ -204,12 +204,11 @@ vim.u.keymap = {
             toggle_complete = "<c-k>",
             current_or_next = "<tab>"
         },
-        vim_multiple_cursors = {
-            start_word_key = "gb",
-            next_key = "<c-n>",
-            prev_key = "<c-p>",
-            skip_key = "<c-b>",
-            quit_key = "<esc>"
+        vim_visual_multi = {
+            switch_mode = "<tab>",
+            find_under = "<c-n>",
+            skip_region = "<c-s>",
+            remove_region = "<c-p>"
         },
         lspsaga = {
             code_action_keys = {
