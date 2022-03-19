@@ -9,7 +9,7 @@
     ],
     "description": "Python head file"
   },
-  "no param function decorator": {
+  "no params function decorator": {
     "prefix": "decorator",
     "body": [
       "from functools import wraps\n\n",

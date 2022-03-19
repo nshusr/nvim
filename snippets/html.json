@@ -4,7 +4,7 @@
     "body": [
       "<script src='https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js'></script>"
     ],
-    "description": "快速引入jQuery"
+    "description": "快速引入 jQuery"
   },
   "bootstrap import": {
     "prefix": "bootstrap",
@@ -13,28 +13,28 @@
       "<script src='https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>",
       "<script src='https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js' defer></script>"
     ],
-    "description": "快速引入bootstrap前端UI库"
+    "description": "快速引入 bootstrap 前端 UI 库"
   },
   "vue3": {
     "prefix": "vue3",
     "body": [
       "<script src='https://cdn.bootcdn.net/ajax/libs/vue/3.1.5/vue.global.js'></script>"
     ],
-    "description": "快速引入vue3.js"
+    "description": "快速引入 Vue3"
   },
   "vue2": {
     "prefix": "vue2",
     "body": [
       "<script src='https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.js'></script>"
     ],
-    "description": "快速引入vue2.js"
+    "description": "快速引入 Vue2"
   },
   "axios": {
     "prefix": "axios",
     "body": [
       "<script src='https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js'></script>"
     ],
-    "description": "快速引入axios"
+    "description": "快速引入 axios"
   },
   "aliyunfonticon": {
     "prefix": "aliyunfonticon",
@@ -49,7 +49,7 @@
       "<link rel=\"stylesheet\" href=\"//unpkg.com/layui@2.6.8/dist/css/layui.css\">",
       "<script src=\"//unpkg.com/layui@2.6.8/dist/layui.js\" defer></script>"
     ],
-    "description": "layui前端UI库"
+    "description": "layui 前端 UI 库"
   },
   "demo": {
     "prefix": "demo",
