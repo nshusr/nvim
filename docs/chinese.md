@@ -151,30 +151,35 @@ $ yay -S xsel
 
 ### 功能类键位
 
-现在有 4 个功能类键位，分别由以下插件提供：
+现在有 5 个功能类键位，分别由以下插件提供：
 
-| 模式 | 键位            | 说明       | 插件                                                             |
-| ---- | --------------- | ---------- | ---------------------------------------------------------------- |
-| n    | &lt;leader&gt;1 | 切换文件树 | [neovim-tree](https://github.com/kyazdani42/nvim-tree.lua)       |
-| n    | &lt;leader&gt;2 | 切换大纲树 | [aerial](https://github.com/stevearc/aerial.nvim)                |
-| n    | &lt;leader&gt;3 | 切换撤销树 | [undotree](https://github.com/mbbill/undotree)                   |
-| n    | &lt;leader&gt;4 | 切换 DB 树 | [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui) |
+| 模式 | 键位            | 说明         | 插件                                                             |
+| ---- | --------------- | ------------ | ---------------------------------------------------------------- |
+| n    | &lt;leader&gt;1 | 切换文件树   | [neovim-tree](https://github.com/kyazdani42/nvim-tree.lua)       |
+| n    | &lt;leader&gt;2 | 切换大纲树   | [aerial](https://github.com/stevearc/aerial.nvim)                |
+| n    | &lt;leader&gt;3 | 切换撤销树   | [undotree](https://github.com/mbbill/undotree)                   |
+| n    | &lt;leader&gt;4 | 切换 DB 树   | [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui) |
+| n    | &lt;leader&gt;5 | 开启绘图模式 | [venn](https://github.com/jbyuki/venn.nvim)                      |
 
 按下 &lt;leader&gt;1 查看目录：
 
-![Peek 2022-03-10 23-14](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102319458.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102319458.gif)
 
 按下 &lt;leader&gt;2 查看大纲：
 
-![Peek 2022-03-10 23-19](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102320738.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102320738.gif)
 
 按下 &lt;leader&gt;3 查看撤销，即使你退出了 neovim，下次打开该文件时依旧可以 undo 或者 redo：
 
-![Peek 2022-03-10 23-21](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102322474.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102322474.gif)
 
 按下 &lt;leader&gt;4 查看 DB，你可以配置链接 DB，它在 [options.lua](../lua/core/options.lua) 文件中：
 
-![Peek 2022-03-10 23-24](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102325558.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102325558.gif)
+
+按下 &lt;leader&gt;5 开启绘图模式，绘图模式使用请参加下面的章节：
+
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203191542040.gif)
 
 ### 缓冲区
 
@@ -199,7 +204,7 @@ $ yay -S xsel
 | n    | &lt;leader&gt;b9 | 跳转到缓冲区 9     | [bufferline](https://github.com/akinsho/bufferline.nvim) |
 | n    | &lt;leader&gt;bt | 跳转到缓冲区 n     | [bufferline](https://github.com/akinsho/bufferline.nvim) |
 
-![Peek 2022-03-11 14-46](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203111446713.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203111446713.gif)
 
 ### 快速跳转
 
@@ -211,7 +216,7 @@ $ yay -S xsel
 | n    | &lt;leader&gt;hw | 跳转到某个单词 | [hop](https://github.com/phaazon/hop.nvim) |
 | n    | &lt;leader&gt;hl | 跳转到某一行上 | [hop](https://github.com/phaazon/hop.nvim) |
 
-![Peek 2022-03-12 15-44](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121545394.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121545394.gif)
 
 ### lsp 操作
 
@@ -233,7 +238,7 @@ $ yay -S xsel
 | n    | &lt;leader&gt;ca | 触发代码行为         | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | i    | &lt;c-j&gt;      | 查看函数签名         | [lsp_signature](https://github.com/ray-x/lsp_signature.nvim)  |
 
-![Peek 2022-03-12 16-05](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121606504.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121606504.gif)
 
 ### 代码补全
 
@@ -259,7 +264,7 @@ $ ~/.local/share/nvim/site/pack/packer/opt/cmp-tabnine/install.sh
 | i    | &lt;a-]&gt; | 选择 copilot 的下一个建议                                                  | [copilot](https://github.com/github/copilot.vim) |
 | i    | &lt;c-[&gt; | 关闭 copilot 的建议                                                        | [copilot](https://github.com/github/copilot.vim) |
 
-![Peek 2022-03-12 16-14](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121615483.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121615483.gif)
 
 ### 代码重构
 
@@ -281,7 +286,7 @@ $ yay -S ripgrep
 | n    | &lt;leader&gt;r  | 进行替换                         | [nvim_spectre](https://github.com/nvim-pack/nvim-spectre) |
 | n    | &lt;leader&gt;v  | 查看差异对比                     | [nvim_spectre](https://github.com/nvim-pack/nvim-spectre) |
 
-![Peek 2022-03-12 15-52](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121552532.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121552532.gif)
 
 ### 代码注释
 
@@ -297,7 +302,7 @@ $ yay -S ripgrep
 | n    | gco  | 在新行首插入注释（行模式）   | [Comment](https://github.com/numToStr/Comment.nvim) |
 | n    | gcA  | 在当前行尾插入注释（行模式） | [Comment](https://github.com/numToStr/Comment.nvim) |
 
-![Peek 2022-03-12 16-18](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121618431.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121618431.gif)
 
 ### 代码格式化
 
@@ -317,7 +322,7 @@ $ pip3 install sqlformat
 
 格式化的键位是 &lt;leader&gt;cf。
 
-![Peek 2022-03-12 16-24](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121625188.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121625188.gif)
 
 ### 代码调试
 
@@ -334,7 +339,7 @@ $ pip3 install sqlformat
 | n    | &lt;f9&gt;       | 重新启动调试               | [nvim-dap](https://github.com/mfussenegger/nvim-dap)   |
 | n    | &lt;f10&gt;      | 关闭调试程序               | [nvim-dap](https://github.com/mfussenegger/nvim-dap)   |
 
-![Peek 2022-03-12 16-21](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121621633.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121621633.gif)
 
 ### 代码截图
 
@@ -362,7 +367,7 @@ $ pip3 install sqlformat
 
 另外，浮动终端和 lazygit 终端默认是进入插入模式的，浮动终端按下 &lt;esc&gt; 退出，lazygit 终端按下 q 退出。
 
-![Peek 2022-03-12 16-22](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121622011.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121622011.gif)
 
 ### 查找相关
 
@@ -390,7 +395,7 @@ $ yay -S repgrep
 | n    | &lt;leader&gt;fn | 查找最近的消息记录     | [nvim-notify](https://github.com/rcarriga/nvim-notify)        |
 | n    | &lt;leader&gt;fc | 在目录树中打开当前文件 | [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)      |
 
-![Peek 2022-03-12 15-56](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121556021.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121556021.gif)
 
 ### 文字翻译
 
@@ -413,14 +418,14 @@ $ yay -S repgrep
 | x    | &lt;leader&gt;trc | 将英文替换成中文 | [translator](https://github.com/uga-rosa/translate.nvim) |
 | x    | &lt;leader&gt;tre | 将中文替换成英文 | [translator](https://github.com/uga-rosa/translate.nvim) |
 
-![Peek 2022-03-12 15-59](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121559836.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121559836.gif)
 
 ### 多光标操作
 
 [vim-visual-multi](https://github.com/mg979/vim-visual-multi) 插件能为 neovim 提供多光标操作。
 
-| 模式 | 键位        | 说明           | 插件                                                                    |
-| ---- | ----------- | -------------- | ----------------------------------------------------------------------- |
+| 模式 | 键位        | 说明           | 插件                                                          |
+| ---- | ----------- | -------------- | ------------------------------------------------------------- |
 | n    | &lt;c-n&gt; | 选择下一个词汇 | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
 | n    | &lt;c-p&gt; | 取消当前选择   | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
 | n    | &lt;c-s&gt; | 跳过当前选择   | [vim-visual-multi](https://github.com/mg979/vim-visual-multi) |
@@ -442,7 +447,24 @@ $ yay -S repgrep
 | n    | &lt;bs&gt;  | 缩小范围选择 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |
 | n    | &lt;tab&gt; | 全选整个范围 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |
 
-![Peek 2022-03-12 16-23](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121624365.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121624365.gif)
+
+### 绘图模式
+
+[venn](https://github.com/jbyuki/venn.nvim) 能够让我们在 neovim 中进行绘图。
+
+下面是我设置的键位绑定：
+
+| 模式 | 键位        | 说明         | 插件                                        |
+| ---- | ----------- | ------------ | ------------------------------------------- |
+| n    | &lt;c-k&gt; | 向上绘制线条 | [venn](https://github.com/jbyuki/venn.nvim) |
+| n    | &lt;c-j&gt; | 向下绘制线条 | [venn](https://github.com/jbyuki/venn.nvim) |
+| n    | &lt;c-h&gt; | 向左绘制线条 | [venn](https://github.com/jbyuki/venn.nvim) |
+| n    | &lt;c-l&gt; | 向右绘制线条 | [venn](https://github.com/jbyuki/venn.nvim) |
+| v    | b           | 绘制方块盒   | [venn](https://github.com/jbyuki/venn.nvim) |
+| v    | f           | 填充区域     | [venn](https://github.com/jbyuki/venn.nvim) |
+
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203191542040.gif)
 
 ### 其它按键
 
@@ -450,7 +472,7 @@ $ yay -S repgrep
 
 它的键位绑定是 gs，如果你想增加自定义的单词，可以在 [switch 插件配置文件](../lua/configure/plugins/switch.lua) 文件中新增。
 
-![Peek 2022-03-12 16-25](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121626121.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121626121.gif)
 
 [surround](https://github.com/ur4ltz/surround.nvim) 插件能快速的替换包裹，比如把 [] 替换为 ()，把 "" 替换成 ''。
 
@@ -462,7 +484,7 @@ cs[char][char]  修改包裹
 ys[scope][char] 增加包裹
 ```
 
-![Peek 2022-03-12 16-27](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121627730.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121627730.gif)
 
 ## 一些命令
 

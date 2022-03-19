@@ -151,28 +151,33 @@ Here are the basic keys:
 
 ### Function keys
 
-There are now 4 function keys provided by the following plugins:
+There are now 5 function keys provided by the following plugins:
 
-| Models | Keys            | Instructions        | Plugins                                                          |
-| ------ | --------------- | ------------------- | ---------------------------------------------------------------- |
-| n      | &lt;leader&gt;1 | switch file tree    | [neovim-tree](https://github.com/kyazdani42/nvim-tree.lua)       |
-| n      | &lt;leader&gt;2 | Toggle outline tree | [aerial](https://github.com/stevearc/aerial.nvim)                |
-| n      | &lt;leader&gt;3 | switch undo tree    | [undotree](https://github.com/mbbill/undotree)                   |
-| n      | &lt;leader&gt;4 | switch DB tree      | [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui) |
+| Models | Keys            | Instructions         | Plugins                                                          |
+| ------ | --------------- | -------------------- | ---------------------------------------------------------------- |
+| n      | &lt;leader&gt;1 | switch file tree     | [neovim-tree](https://github.com/kyazdani42/nvim-tree.lua)       |
+| n      | &lt;leader&gt;2 | Toggle outline tree  | [aerial](https://github.com/stevearc/aerial.nvim)                |
+| n      | &lt;leader&gt;3 | switch undo tree     | [undotree](https://github.com/mbbill/undotree)                   |
+| n      | &lt;leader&gt;4 | switch DB tree       | [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui) |
+| n      | &lt;leader&gt;5 | Turn on drawing mode | [venn](https://github.com/jbyuki/venn.nvim)                      |
 
-![Peek 2022-03-10 23-14](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102319458.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102319458.gif)
 
 Press &lt;leader&gt;2 to view the outline:
 
-![Peek 2022-03-10 23-19](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102320738.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102320738.gif)
 
 Press &lt;leader&gt;3 to view the undo, even if you quit neovim, you can still undo or redo the next time you open the file:
 
-![Peek 2022-03-10 23-21](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102322474.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102322474.gif)
 
 Press &lt;leader&gt;4 to view the DB, you can configure the link DB, which is in the [options.lua](../lua/core/options.lua) file:
 
-![Peek 2022-03-10 23-24](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102325558.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102325558.gif)
+
+Press &lt;leader&gt;5 to start drawing mode, please refer to the following chapters for drawing mode:
+
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203191542040.gif)
 
 ### buffer
 
@@ -197,7 +202,7 @@ Press &lt;leader&gt;4 to view the DB, you can configure the link DB, which is in
 | n     | &lt;leader&gt;b9 | jump to buffer 9                 | [bufferline](https://github.com/akinsho/bufferline.nvim) |
 | n     | &lt;leader&gt;bt | jump to buffer n                 | [bufferline](https://github.com/akinsho/bufferline.nvim) |
 
-![Peek 2022-03-11 14-46](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203111446713.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203111446713.gif)
 
 ### Quick Jump
 
@@ -209,7 +214,7 @@ Press &lt;leader&gt;4 to view the DB, you can configure the link DB, which is in
 | n      | &lt;leader&gt;hw | jump to a single | [hop](https://github.com/phaazon/hop.nvim) |
 | n      | &lt;leader&gt;hl | jump to a line   | [hop](https://github.com/phaazon/hop.nvim) |
 
-![Peek 2022-03-12 15-44](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121545394.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121545394.gif)
 
 ### lsp operations
 
@@ -231,7 +236,7 @@ I use a lot of plugins to make LSP as easy to use as possible, here are some key
 | n      | &lt;leader&gt;ca | Trigger code behavior          | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | i      | &lt;c-j&gt;      | View function signature        | [lsp_signature](https://github.com/ray-x/lsp_signature.nvim)  |
 
-![Peek 2022-03-12 16-05](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121606504.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121606504.gif)
 
 ### Code Completion
 
@@ -257,7 +262,7 @@ The key settings are as follows:
 | i      | &lt;a-]&gt; | Select the next suggestion from copilot                                                                                                                             | [copilot](https://github.com/github/copilot.vim) |
 | i      | &lt;c-[&gt; | Suggestions for turning off copilot                                                                                                                                 | [copilot](https://github.com/github/copilot.vim) |
 
-![Peek 2022-03-12 16-14](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121615483.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121615483.gif)
 
 ### Refactoring
 
@@ -279,7 +284,7 @@ $ yay -S ripgrep
 | n      | &lt;leader&gt;r  | make a replacement                                  | [nvim_spectre](https://github.com/nvim-pack/nvim-spectre) |
 | n      | &lt;leader&gt;v  | View the difference comparison                      | [nvim_spectre](https://github.com/nvim-pack/nvim-spectre) |
 
-![Peek 2022-03-12 15-52](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121552532.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121552532.gif)
 
 ### Code comments
 
@@ -295,7 +300,7 @@ Thanks to [Comment](https://github.com/numToStr/Comment.nvim) plugin and [nvim-t
 | n      | gco  | Insert a comment at the beginning of a new line (line mode)       | [Comment](https://github.com/numToStr/Comment.nvim) |
 | n      | gcA  | Insert a comment at the end of the current line (line mode)       | [Comment](https://github.com/numToStr/Comment.nvim) |
 
-![Peek 2022-03-12 16-18](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121618431.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121618431.gif)
 
 ### Code formatting
 
@@ -315,7 +320,7 @@ $ pip3 install sqlformat
 
 The formatted key is &lt;leader&gt;cf.
 
-![Peek 2022-03-12 16-24](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121625188.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121625188.gif)
 
 ### Code debugging
 
@@ -332,7 +337,7 @@ The formatted key is &lt;leader&gt;cf.
 | n      | &lt;f9&gt;       | restart debugging                         | [nvim-dap](https://github.com/mfussenegger/nvim-dap)   |
 | n      | &lt;f10&gt;      | close the debugger                        | [nvim-dap](https://github.com/mfussenegger/nvim-dap)   |
 
-![Peek 2022-03-12 16-21](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121621633.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121621633.gif)
 
 ### Code screenshot
 
@@ -360,7 +365,7 @@ In addition, I customized a floating terminal and a [lazygit](https://github.com
 
 In addition, the floating terminal and lazygit terminal enter insert mode by default, the floating terminal press &lt;esc&gt; to exit, and the lazygit terminal press q to exit.
 
-![Peek 2022-03-12 16-22](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121622011.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121622011.gif)
 
 ### Find related
 
@@ -388,7 +393,7 @@ $ yay -S repgrep
 | n      | &lt;leader&gt;fn | Find recent message records                 | [nvim-notify](https://github.com/rcarriga/nvim-notify)        |
 | n      | &lt;leader&gt;fc | Open the current file in the directory tree | [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)      |
 
-![Peek 2022-03-12 15-56](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121556021.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121556021.gif)
 
 ### Text translation
 
@@ -411,7 +416,7 @@ The following is the key binding I set, translated from English to Chinese or Ch
 | x      | &lt;leader&gt;trc | Replace English with Chinese | [translator](https://github.com/uga-rosa/translate.nvim) |
 | x      | &lt;leader&gt;tre | Replace Chinese with English | [translator](https://github.com/uga-rosa/translate.nvim) |
 
-![Peek 2022-03-12 15-59](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121559836.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121559836.gif)
 
 ### Multi-cursor operation
 
@@ -440,7 +445,24 @@ Here are the keys I bind to it:
 | n      | &lt;bs&gt;  | Narrow selection             | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |
 | n      | &lt;tab&gt; | Select all the entire range  | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) |
 
-![Peek 2022-03-12 16-23](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121624365.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121624365.gif)
+
+### Drawing mode
+
+[venn](https://github.com/jbyuki/venn.nvim) allows us to draw in neovim.
+
+Here are the keybindings I set up:
+
+| 模式 | 键位        | 说明                     | 插件                                        |
+| ---- | ----------- | ------------------------ | ------------------------------------------- |
+| n    | &lt;c-k&gt; | draw line up             | [venn](https://github.com/jbyuki/venn.nvim) |
+| n    | &lt;c-j&gt; | draw line down           | [venn](https://github.com/jbyuki/venn.nvim) |
+| n    | &lt;c-h&gt; | draw line to the left    | [venn](https://github.com/jbyuki/venn.nvim) |
+| n    | &lt;c-l&gt; | Draw a line to the right | [venn](https://github.com/jbyuki/venn.nvim) |
+| v    | b           | draw box                 | [venn](https://github.com/jbyuki/venn.nvim) |
+| v    | f           | fill area                | [venn](https://github.com/jbyuki/venn.nvim) |
+
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203191542040.gif)
 
 ### Other keys
 
@@ -448,7 +470,7 @@ The [switch](https://github.com/AndrewRadev/switch.vim) plugin can quickly chang
 
 Its key binding is gs, if you want to add a custom word, you can add it in the [switch plugin configuration file](../lua/configure/plugins/switch.lua) file.
 
-![Peek 2022-03-12 16-25](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121626121.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121626121.gif)
 
 The [surround](https://github.com/ur4ltz/surround.nvim) plugin can quickly replace packages, such as replacing [] with () and "" with ''.
 
@@ -460,7 +482,7 @@ cs[char][char]  Modify the package
 ys[scope][char] add package
 ```
 
-![Peek 2022-03-12 16-27](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121627730.gif)
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121627730.gif)
 
 ## some commands
 

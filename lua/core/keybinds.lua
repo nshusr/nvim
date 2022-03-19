@@ -19,6 +19,7 @@ end
 vim.u.keymap = {
     opts = {
         ntst = {noremap = true, silent = true},
+        ntsf = {noremap = true, silent = false},
         etst = {expr = true, silent = true},
         none = {}
     },
@@ -73,6 +74,9 @@ vim.u.keymap = {
         },
         vim_dadbod_ui = {
             {"n", "<leader>4", ":DBUIToggle<cr>", "ntst"}
+        },
+        venn = {
+            {"n", "<leader>5", ":lua Toggle_venn()<cr>", "ntsf"}
         },
         todo_comments = {
             {"n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<cr>", "ntst"}
@@ -184,6 +188,14 @@ vim.u.keymap = {
             {"n", "}", "<cmd>AerialNext<CR>", "none"},
             {"n", "[[", "<cmd>AerialPrevUp<CR>", "none"},
             {"n", "]]", "<cmd>AerialNextUp<CR>", "none"}
+        },
+        venn = {
+            {"n", "<c-j>", "<C-v>j:VBox<CR>", "ntsf"},
+            {"n", "<c-k>", "<C-v>k:VBox<CR>", "ntsf"},
+            {"n", "<c-l>", "<C-v>l:VBox<CR>", "ntsf"},
+            {"n", "<c-h>", "<C-v>h:VBox<CR>", "ntsf"},
+            {"v", "b", ":VBox<CR>", "ntsf"},
+            {"v", "f", ":VFill<CR>", "ntsf"}
         }
     },
     plugin_set_key = {
