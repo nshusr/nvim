@@ -5,6 +5,7 @@
 vim.g.Illuminate_ftblacklist = {
     "NvimTree",
     "aerial",
+    "spectre_panel",
     "dbui",
     "toggleterm"
 }

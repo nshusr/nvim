@@ -153,7 +153,7 @@ local packer_install_plugins = {
     -- built-in terminal
     {"akinsho/toggleterm.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
     -- multi-cursor mode
-    {"mg979/vim-visual-multi", load_file = true},
+    {"mg979/vim-visual-multi", load_file = true, event = {"BufRead", "BufNewFile"}},
     -- auto save
     {"Pocco81/AutoSave.nvim", load_file = true, event = {"TextChanged", "TextChangedI"}},
     -- automatically restores the cursor position
@@ -169,7 +169,7 @@ local packer_install_plugins = {
     -- key binder
     {"folke/which-key.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
     -- translation plugins
-    {"uga-rosa/translate.nvim", load_file = true, cmd = "Translate", disable = false},
+    {"uga-rosa/translate.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, disable = false},
     -- drawing tools
     {"jbyuki/venn.nvim", load_file = true, event = "FuncUndefined"},
     -- long screenshot of the code

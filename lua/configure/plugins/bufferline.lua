@@ -36,6 +36,12 @@ local options = {
                 text_align = "left"
             },
             {
+                filetype = "spectre_panel",
+                text = "Project Blurry Search",
+                highlight = "Directory",
+                text_align = "left"
+            },
+            {
                 filetype = "aerial",
                 text = "Outline Explorer",
                 highlight = "Directory",
