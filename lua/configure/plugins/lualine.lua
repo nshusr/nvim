@@ -8,7 +8,8 @@ gps.setup()
 local function hide_component()
     local filetype_table = {
         "NvimTree",
-        "aerial"
+        "aerial",
+        "dbui"
     }
     local filetype = vim.bo.filetype
     for _, ft in ipairs(filetype_table) do

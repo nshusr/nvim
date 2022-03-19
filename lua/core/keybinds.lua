@@ -183,7 +183,7 @@ vim.u.keymap = {
             {"n", "<leader>cn", "<cmd>Lspsaga rename<CR>", "ntst"}
         },
         aerial = {
-            {"n", "<leader>2", "<cmd>AerialToggle!<CR>", "none"},
+            {"n", "<leader>2", "<cmd>AerialToggle! right<CR>", "none"},
             {"n", "{", "<cmd>AerialPrev<CR>", "none"},
             {"n", "}", "<cmd>AerialNext<CR>", "none"},
             {"n", "[[", "<cmd>AerialPrevUp<CR>", "none"},

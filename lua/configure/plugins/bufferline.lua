@@ -22,6 +22,24 @@ local options = {
                 text = "File Explorer",
                 highlight = "Directory",
                 text_align = "left"
+            },
+            {
+                filetype = "undotree",
+                text = "History Explorer",
+                highlight = "Directory",
+                text_align = "left"
+            },
+            {
+                filetype = "dbui",
+                text = "Database Explorer",
+                highlight = "Directory",
+                text_align = "left"
+            },
+            {
+                filetype = "aerial",
+                text = "Outline Explorer",
+                highlight = "Directory",
+                text_align = "center"
             }
         },
         -- show diagnostics icons
@@ -38,3 +56,8 @@ local options = {
 }
 
 require("bufferline").setup(options)
+
+vim.cmd([[
+    " bufferline
+    highlight! Directory guifg=#96CDF8 gui=bold
+]])
