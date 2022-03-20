@@ -22,3 +22,10 @@ ascii
 url
 params/!
 params
+CBV
+FBV/!
+FBV
+APIView
+Django
+JSON
+QueryDict

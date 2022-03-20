@@ -166,7 +166,16 @@ vim.u.keymap = {
             {"n", "<leader>trc", ":<c-u>Translate ZH -source=EN -output=replace<cr>", "ntst"},
             {"x", "<leader>trc", ":Translate ZH -source=EN -output=replace<cr>", "ntst"},
             {"n", "<leader>tre", ":<c-u>Translate EN -source=ZH -output=replace<cr>", "ntst"},
-            {"x", "<leader>tre", ":Translate EN -source=ZH -output=replace<cr>", "ntst"}
+            {"x", "<leader>tfe", ":Translate EN -source=ZH -output=floating<cr>", "ntst"},
+            {"n", "<leader>tfc", ":<c-u>Translate ZH -source=EN -output=floating<cr>", "ntst"},
+            {"x", "<leader>tfc", ":Translate ZH -source=EN -output=floating<cr>", "ntst"},
+            {"n", "<leader>tfe", ":<c-u>Translate EN -source=ZH -output=floating<cr>", "ntst"},
+            {"x", "<leader>tfe", ":Translate EN -source=ZH -output=floating<cr>", "ntst"},
+            {"x", "<leader>tie", ":Translate EN -source=ZH -output=insert<cr>", "ntst"},
+            {"n", "<leader>tic", ":<c-u>Translate ZH -source=EN -output=insert<cr>", "ntst"},
+            {"x", "<leader>tic", ":Translate ZH -source=EN -output=insert<cr>", "ntst"},
+            {"n", "<leader>tie", ":<c-u>Translate EN -source=ZH -output=insert<cr>", "ntst"},
+            {"x", "<leader>tie", ":Translate EN -source=ZH -output=insert<cr>", "ntst"}
         }
     },
     buffer_mapping = {
