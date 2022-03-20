@@ -405,16 +405,24 @@ If you are using [deepl](https://www.deepl.com/en/docs-api/) then additionally i
 
 The following is the key binding I set, translated from English to Chinese or Chinese to English, you can replace it in the [keybinds](../lua/core/keybinds.lua) file:
 
-| Models | Keys              | Instructions                 | Plugins                                                  |
-| ------ | ----------------- | ---------------------------- | -------------------------------------------------------- |
-| n      | &lt;leader&gt;tsc | Translate English to Chinese | [translator](https://github.com/uga-rosa/translate.nvim) |
-| n      | &lt;leader&gt;tse | Translate Chinese to English | [translator](https://github.com/uga-rosa/translate.nvim) |
-| n      | &lt;leader&gt;trc | Replace English with Chinese | [translator](https://github.com/uga-rosa/translate.nvim) |
-| n      | &lt;leader&gt;tre | Replace Chinese with English | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x      | &lt;leader&gt;tsc | Translate English to Chinese | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x      | &lt;leader&gt;tse | Translate Chinese to English | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x      | &lt;leader&gt;trc | Replace English with Chinese | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x      | &lt;leader&gt;tre | Replace Chinese with English | [translator](https://github.com/uga-rosa/translate.nvim) |
+| Models | Keys              | Instructions                                                  | Plugins                                                  |
+| ------ | ----------------- | ------------------------------------------------------------- | -------------------------------------------------------- |
+| n      | &lt;leader&gt;tcs | Translate English to Chinese (split)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;tcr | Replace English with Chinese                                  | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;tcf | Translate English to Chinese (float)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;tci | Insert the English translation result below the original text | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;tes | Translate Chinese to English (split)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;ter | Replace Chinese with English                                  | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;tef | Translate Chinese to English (float)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n      | &lt;leader&gt;tei | Insert the Chinese translation result below the original text | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tcs | Translate English to Chinese (split)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tcr | Replace English with Chinese                                  | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tcf | Translate English to Chinese (float)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tci | Insert the English translation result below the original text | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tes | Translate Chinese to English (split)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;ter | Replace Chinese with English                                  | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tef | Translate Chinese to English (float)                          | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x      | &lt;leader&gt;tei | Insert the Chinese translation result below the original text | [translator](https://github.com/uga-rosa/translate.nvim) |
 
 ![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121559836.gif)
 

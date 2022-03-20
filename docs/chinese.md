@@ -407,16 +407,24 @@ $ yay -S repgrep
 
 下面是我设置的键位绑定，英文翻译成中文或者中文翻译成英文，在 [keybinds](../lua/core/keybinds.lua) 文件中你可以将它替换掉：
 
-| 模式 | 键位              | 说明             | 插件                                                     |
-| ---- | ----------------- | ---------------- | -------------------------------------------------------- |
-| n    | &lt;leader&gt;tsc | 将英文翻译成中文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| n    | &lt;leader&gt;tse | 将中文翻译成英文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| n    | &lt;leader&gt;trc | 将英文替换成中文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| n    | &lt;leader&gt;tre | 将中文替换成英文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x    | &lt;leader&gt;tsc | 将英文翻译成中文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x    | &lt;leader&gt;tse | 将中文翻译成英文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x    | &lt;leader&gt;trc | 将英文替换成中文 | [translator](https://github.com/uga-rosa/translate.nvim) |
-| x    | &lt;leader&gt;tre | 将中文替换成英文 | [translator](https://github.com/uga-rosa/translate.nvim) |
+| 模式 | 键位              | 说明                         | 插件                                                     |
+| ---- | ----------------- | ---------------------------- | -------------------------------------------------------- |
+| n    | &lt;leader&gt;tcs | 将英文翻译成中文（拆分）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;tcr | 将英文替换成中文             | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;tcf | 将英文翻译成中文（浮动）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;tci | 将英文翻译结果插入至原文下方 | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;tes | 将中文翻译成英文（拆分）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;ter | 将中文替换成英文             | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;tef | 将中文翻译成英文（浮动）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| n    | &lt;leader&gt;tei | 将中文翻译结果插入至原文下方 | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tcs | 将英文翻译成中文（拆分）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tcr | 将英文替换成中文             | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tcf | 将英文翻译成中文（浮动）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tci | 将英文翻译结果插入至原文下方 | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tes | 将中文翻译成英文（拆分）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;ter | 将中文替换成英文             | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tef | 将中文翻译成英文（浮动）     | [translator](https://github.com/uga-rosa/translate.nvim) |
+| x    | &lt;leader&gt;tei | 将中文翻译结果插入至原文下方 | [translator](https://github.com/uga-rosa/translate.nvim) |
 
 ![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121559836.gif)
 
