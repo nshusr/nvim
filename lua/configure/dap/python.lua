@@ -3,7 +3,7 @@
 return {
     adapters = {
         type = "executable",
-        command = "python3",
+        command = vim.u.python_interpreter_path,
         args = {"-m", "debugpy.adapter"}
     },
     configurations = {

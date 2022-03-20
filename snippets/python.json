@@ -22,5 +22,13 @@
       "    return wrapper"
     ],
     "description": "Python decorator without parameters"
+  },
+  "dir object": {
+    "prefix": "dir",
+    "body": [
+      "print(\"- \" + \"- \".join(list(map(lambda x: x+\"\\n\",",
+      "\t\t\t\t\t\t\t\tfilter(lambda x: not x.startswith(\"_\"), dir($1))))))"
+    ],
+    "description": "Get object dir, Attributes that do not start with _"
   }
 }
