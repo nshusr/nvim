@@ -461,16 +461,28 @@ Here are the keys I bind to it:
 
 Here are the keybindings I set up:
 
-| 模式 | 键位        | 说明                     | 插件                                        |
-| ---- | ----------- | ------------------------ | ------------------------------------------- |
-| n    | &lt;c-k&gt; | draw line up             | [venn](https://github.com/jbyuki/venn.nvim) |
-| n    | &lt;c-j&gt; | draw line down           | [venn](https://github.com/jbyuki/venn.nvim) |
-| n    | &lt;c-h&gt; | draw line to the left    | [venn](https://github.com/jbyuki/venn.nvim) |
-| n    | &lt;c-l&gt; | Draw a line to the right | [venn](https://github.com/jbyuki/venn.nvim) |
-| v    | b           | draw box                 | [venn](https://github.com/jbyuki/venn.nvim) |
-| v    | f           | fill area                | [venn](https://github.com/jbyuki/venn.nvim) |
+| Modes | Keys        | Instructions             | Plugins                                     |
+| ----- | ----------- | ------------------------ | ------------------------------------------- |
+| n     | &lt;c-k&gt; | draw line up             | [venn](https://github.com/jbyuki/venn.nvim) |
+| n     | &lt;c-j&gt; | draw line down           | [venn](https://github.com/jbyuki/venn.nvim) |
+| n     | &lt;c-h&gt; | draw line to the left    | [venn](https://github.com/jbyuki/venn.nvim) |
+| n     | &lt;c-l&gt; | Draw a line to the right | [venn](https://github.com/jbyuki/venn.nvim) |
+| v     | b           | draw box                 | [venn](https://github.com/jbyuki/venn.nvim) |
+| v     | f           | fill area                | [venn](https://github.com/jbyuki/venn.nvim) |
 
 ![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203191542040.gif)
+
+### Session management
+
+The [persisted](https://github.com/olimorris/persisted.nvim) plugin provides session management for neovim, which by default saves the session before exiting neovim each time.
+
+| Modes | Keys             | Instructions              | Plugins                                                  |
+| ----- | ---------------- | ------------------------- | -------------------------------------------------------- |
+| n     | &lt;leader&gt;ss | Save the session manually | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n     | &lt;leader&gt;sd | delete save session | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n     | &lt;leader&gt;sl | restore save session | [persisted](https://github.com/olimorris/persisted.nvim) |
+
+Note that if you are using some welcome screen plugins, there may be conflicts with that plugin.
 
 ### Other keys
 

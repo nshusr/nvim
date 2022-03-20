@@ -474,6 +474,19 @@ $ yay -S repgrep
 
 ![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203191542040.gif)
 
+### 会话管理
+
+[persisted](https://github.com/olimorris/persisted.nvim) 插件为 neovim 提供了会话管理，它默认会在每次退出 neovim 前保存会话。
+
+| 模式 | 键位             | 说明         | 插件                                                     |
+| ---- | ---------------- | ------------ | -------------------------------------------------------- |
+| n    | &lt;leader&gt;ss | 手动保存会话 | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n    | &lt;leader&gt;sd | 删除保存会话 | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n    | &lt;leader&gt;sl | 恢复保存会话 | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n    |                  |              |                                                          |
+
+请注意，如果您使用了一些欢迎屏幕插件，那么可能会和该插件产生冲突。
+
 ### 其它按键
 
 [switch](https://github.com/AndrewRadev/switch.vim) 插件能够快速的让 true 变为 false，或者 false 变为 true。

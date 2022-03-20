@@ -136,6 +136,8 @@ local packer_install_plugins = {
     -------------
     -- function -
     -------------
+    -- session manager
+    {"olimorris/persisted.nvim", load_file = true},
     -- deleting buffer does not affect existing layouts
     {"famiu/bufdelete.nvim", event = {"BufRead", "BufNewFile"}},
     -- supports the buffer bar for lsp status
@@ -169,7 +171,7 @@ local packer_install_plugins = {
     -- key binder
     {"folke/which-key.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
     -- translation plugins
-    {"uga-rosa/translate.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, disable = false},
+    {"uga-rosa/translate.nvim", load_file = true, cmd = "Translate", disable = false},
     -- drawing tools
     {"jbyuki/venn.nvim", load_file = true, event = "FuncUndefined"},
     -- long screenshot of the code

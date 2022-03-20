@@ -91,6 +91,11 @@ vim.u.keymap = {
             {"n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<cr>", "ntst"},
             {"n", "<leader>fh", "<cmd>Telescope resume theme=dropdown<cr>", "ntst"}
         },
+        persisted = {
+            {"n", "<leader>sl", ":SessionLoad<cr><cr>", "ntsf"},
+            {"n", "<leader>ss", ":SessionSave<cr>", "ntsf"},
+            {"n", "<leader>sd", ":SessionDelete<cr>", "ntsf"}
+        },
         bufferline = {
             {"n", "<c-q>", "<cmd>Bdelete!<cr>", "ntst"},
             {"n", "<c-h>", "<cmd>BufferLineCyclePrev<cr>", "ntst"},
