@@ -228,8 +228,8 @@ I use a lot of plugins to make LSP as easy to use as possible, here are some key
 | n      | gr               | View all references            | [telescope](https://github.com/nvim-telescope/telescope.nvim) |
 | n      | go               | Workspace Diagnostics          | [telescope](https://github.com/nvim-telescope/telescope.nvim) |
 | n      | gh               | Get help information           | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n      | g[               | Jump to previous code question | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n      | g]               | Jump to next code question     | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n      | [g               | Jump to previous code question | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n      | ]g               | Jump to next code question     | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | &lt;c-b&gt;      | page up                        | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | &lt;c-f&gt;      | page down                      | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n      | &lt;leader&gt;cn | variable renaming              | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |

@@ -230,8 +230,8 @@ $ yay -S xsel
 | n    | gr               | 查看所有引用         | [telescope](https://github.com/nvim-telescope/telescope.nvim) |
 | n    | go               | 工作区诊断           | [telescope](https://github.com/nvim-telescope/telescope.nvim) |
 | n    | gh               | 获得帮助信息         | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n    | g[               | 跳转到上一个代码问题 | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
-| n    | g]               | 跳转到下一个代码问题 | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n    | [g               | 跳转到上一个代码问题 | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
+| n    | ]g               | 跳转到下一个代码问题 | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | &lt;c-b&gt;      | 向上翻页             | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | &lt;c-f&gt;      | 向下翻页             | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
 | n    | &lt;leader&gt;cn | 变量重命名           | [lspsaga](https://github.com/tami5/lspsaga.nvim)              |
