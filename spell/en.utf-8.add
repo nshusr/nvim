@@ -29,3 +29,5 @@ APIView
 Django
 JSON
 QueryDict
+json
+html

@@ -343,10 +343,10 @@ The formatted key is &lt;leader&gt;cf.
 
 The [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) plugin allows us to generate code images in jpg format.
 
-| Models | Keys             | Instructions      | Plugins                                                                 |
-| ------ | ---------------- | ----------------- | ----------------------------------------------------------------------- |
-| n      | &lt;leader&gt;ch | Generate code map | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh |
-| v      | &lt;leader&gt;ch | Generate code map | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh |
+| Models | Keys             | Instructions      | Plugins                                                                  |
+| ------ | ---------------- | ----------------- | ------------------------------------------------------------------------ |
+| n      | &lt;leader&gt;ch | Generate code map | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) |
+| v      | &lt;leader&gt;ch | Generate code map | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) |
 
 ![image-20220312161955667](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121619966.png)
 
@@ -479,8 +479,8 @@ The [persisted](https://github.com/olimorris/persisted.nvim) plugin provides ses
 | Modes | Keys             | Instructions              | Plugins                                                  |
 | ----- | ---------------- | ------------------------- | -------------------------------------------------------- |
 | n     | &lt;leader&gt;ss | Save the session manually | [persisted](https://github.com/olimorris/persisted.nvim) |
-| n     | &lt;leader&gt;sd | delete save session | [persisted](https://github.com/olimorris/persisted.nvim) |
-| n     | &lt;leader&gt;sl | restore save session | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n     | &lt;leader&gt;sd | delete save session       | [persisted](https://github.com/olimorris/persisted.nvim) |
+| n     | &lt;leader&gt;sl | restore save session      | [persisted](https://github.com/olimorris/persisted.nvim) |
 
 Note that if you are using some welcome screen plugins, there may be conflicts with that plugin.
 

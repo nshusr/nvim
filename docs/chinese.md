@@ -347,8 +347,8 @@ $ pip3 install sqlformat
 
 | 模式 | 键位             | 说明         | 插件                                                                    |
 | ---- | ---------------- | ------------ | ----------------------------------------------------------------------- |
-| n    | &lt;leader&gt;ch | 生成代码图片 | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh |
-| v    | &lt;leader&gt;ch | 生成代码图片 | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh |
+| n    | &lt;leader&gt;ch | 生成代码图片 | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) |
+| v    | &lt;leader&gt;ch | 生成代码图片 | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) |
 
 ![image-20220312161955667](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121619966.png)
 
@@ -483,7 +483,6 @@ $ yay -S repgrep
 | n    | &lt;leader&gt;ss | 手动保存会话 | [persisted](https://github.com/olimorris/persisted.nvim) |
 | n    | &lt;leader&gt;sd | 删除保存会话 | [persisted](https://github.com/olimorris/persisted.nvim) |
 | n    | &lt;leader&gt;sl | 恢复保存会话 | [persisted](https://github.com/olimorris/persisted.nvim) |
-| n    |                  |              |                                                          |
 
 请注意，如果您使用了一些欢迎屏幕插件，那么可能会和该插件产生冲突。
 
