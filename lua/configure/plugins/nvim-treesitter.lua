@@ -36,3 +36,4 @@ local options = {
 }
 
 require("nvim-treesitter.configs").setup(options)
+

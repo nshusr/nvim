@@ -116,7 +116,7 @@ local packer_install_plugins = {
     -- code formatting
     {"sbdchd/neoformat", load_file = true, cmd = "Neoformat"},
     -- quickly change words
-    {"AndrewRadev/switch.vim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"AndrewRadev/switch.vim", load_file = true, cmd = "Switch"},
     -- python indentation
     {"Vimjas/vim-python-pep8-indent", ft = "python"},
     -- emmet abbreviation
@@ -137,7 +137,7 @@ local packer_install_plugins = {
     -- function -
     -------------
     -- session manager
-    {"olimorris/persisted.nvim", load_file = true},
+    {"olimorris/persisted.nvim", load_file = true, module = "persisted"},
     -- deleting buffer does not affect existing layouts
     {"famiu/bufdelete.nvim", event = {"BufRead", "BufNewFile"}},
     -- supports the buffer bar for lsp status

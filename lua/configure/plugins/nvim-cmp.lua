@@ -21,6 +21,10 @@ local nvim_cmp_key = vim.u.keymap.plugin_set_key.nvim_cmp
 
 vim.g.vsnip_snippet_dir = vim.u.code_snippet_directory
 
+local feedkey = function(key, mode)
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+end
+
 ---@diagnostic disable-next-line: redundant-parameter
 local options = {
     snippet = {
@@ -53,9 +57,10 @@ local options = {
         )
     },
     mapping = {
-        -- ["<C-p>"] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior}),
+        -- You can add {behavior u003d cmp.SelectBehavior.Select} to mimic vscode's behavior
+        -- When checked, content will not be automatically inserted
+        -- select_prev_item({behavior = cmp.SelectBehavior.Select})
         [nvim_cmp_key.select_prev_item] = cmp.mapping.select_prev_item(),
-        -- ["<C-n>"] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior}),
         [nvim_cmp_key.select_next_item] = cmp.mapping.select_next_item(),
         [nvim_cmp_key.confirm_current] = cmp.mapping.confirm(),
         [nvim_cmp_key.toggle_complete] = cmp.mapping(
@@ -69,23 +74,31 @@ local options = {
                 end,
                 c = function()
                     if cmp.visible() then
-                        cmp.close()
+                        cmp.abort()
                     else
                         cmp.complete()
                     end
                 end
             }
         ),
-        [nvim_cmp_key.current_or_next] = cmp.mapping(
+        [nvim_cmp_key.confirm_or_next_item_and_next_snippet_placeholder] = cmp.mapping(
             function(fallback)
                 if cmp.visible() then
-                    local entry = cmp.get_selected_entry()
-                    if not entry then
-                        cmp.select_next_item({behavior = cmp.SelectBehavior.Select})
-                    end
-                    cmp.confirm()
+                    cmp.confirm({select = true})
+                elseif vim.fn["vsnip#available"](1) == 1 then
+                    feedkey("<Plug>(vsnip-expand-or-jump)", "")
                 else
-                    fallback()
+                    fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+                end
+            end,
+            {"i", "s", "c"}
+        ),
+        [nvim_cmp_key.prev_item_and_prev_snippet_placeholder] = cmp.mapping(
+            function()
+                if cmp.visible() then
+                    cmp.select_prev_item({behavior = cmp.SelectBehavior.Select})
+                elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+                    feedkey("<Plug>(vsnip-jump-prev)", "")
                 end
             end,
             {"i", "s", "c"}

@@ -92,7 +92,7 @@ vim.u.keymap = {
             {"n", "<leader>fh", "<cmd>Telescope resume theme=dropdown<cr>", "ntst"}
         },
         persisted = {
-            {"n", "<leader>sl", ":SessionLoad<cr><cr>", "ntsf"},
+            {"n", "<leader>sl", "<cmd>lua require('persisted').load({ last = true })<cr><cr>", "ntsf"},
             {"n", "<leader>ss", ":SessionSave<cr>", "ntsf"},
             {"n", "<leader>sd", ":SessionDelete<cr>", "ntsf"}
         },
@@ -227,7 +227,8 @@ vim.u.keymap = {
             select_next_item = "<c-n>",
             confirm_current = "<cr>",
             toggle_complete = "<c-k>",
-            current_or_next = "<tab>"
+            confirm_or_next_item_and_next_snippet_placeholder = "<tab>",
+            prev_item_and_prev_snippet_placeholder = "<s-tab>"
         },
         vim_visual_multi = {
             switch_mode = "<tab>",

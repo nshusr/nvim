@@ -22,3 +22,12 @@ vim.g.dbs = {
         url = "mysql://root@localhost:3306/test"
     }
 }
+
+-- The extension relationship between code snippets and file types
+vim.g.vsnip_filetypes = {
+    ["javascript"] = {"typescript"},
+    ["typescript"] = {"javascript"},
+    ["vue"] = {"javascript", "typescript"},
+    ["html"] = {},
+    ["python"] = {}
+}

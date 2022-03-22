@@ -31,3 +31,8 @@ JSON
 QueryDict
 json
 html
+#oot_dir
+root_dir/!
+file_name
+py
+django
