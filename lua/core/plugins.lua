@@ -48,8 +48,6 @@ local packer_install_plugins = {
     -------------
     -- complete -
     -------------
-    -- git copilot is autocompleted
-    {"github/copilot.vim", load_file = true, event = "InsertCharPre"},
     -- vsnip engine for code snippet support
     {"hrsh7th/vim-vsnip", event = {"InsertEnter", "CmdlineEnter"}},
     -- adds a vscode-like icon for completion
@@ -72,6 +70,8 @@ local packer_install_plugins = {
     {"rafamadriz/friendly-snippets", after = "nvim-cmp"},
     -- tabnine source that provides ai-based intelligent completion
     {"tzachar/cmp-tabnine", run = "./install.sh", after = "nvim-cmp", disable = false},
+    -- git copilot is autocompleted
+    {"github/copilot.vim", load_file = true,  event = {"InsertCharPre"}, disable = false},
     -------------
     ---- dap ----
     -------------
