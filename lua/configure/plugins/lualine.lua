@@ -60,11 +60,11 @@ require("lualine").setup(
             lualine_x = {
                 {"encoding", cond = hide_component},
                 {"fileformat", cond = hide_component},
-                {"filetype", cond = hide_component}
+                {"filetype", cond = hide_component},
             },
             lualine_y = {
                 {get_persisting, cond = hide_component},
-                {"progress", cond = hide_component}
+                {"progress", cond = hide_component},
             },
             lualine_z = {
                 {"location", cond = hide_component}
