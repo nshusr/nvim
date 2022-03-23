@@ -1,18 +1,13 @@
-local utils = require("tools.utils")
+local path = require("tools.path")
 
----- user settings ----
-vim.u = {}
+M = {}
 
-vim.u.transparency_background = false
-vim.u.platform_info = vim.bo.fileformat:upper()
-vim.u.python_interpreter_path = "/usr/bin/python3"
-vim.u.code_snippet_directory = utils.path.join(vim.fn.stdpath("config"), "snippets")
-vim.u.nvim_lint_dir = utils.path.join(vim.fn.stdpath("config"), "lint")
-
----- plugin settings ----
-vim.g.undotree_dir = utils.path.join(vim.fn.stdpath("cache"), "undotree")
-
-vim.g.dbs = {
+M.PLATFORM_INFO = vim.bo.fileformat:upper()
+M.TRANSPARENCY_BACKGROUND = false
+M.PYTHON_INTERPRETER_PATH = "/usr/bin/python3"
+M.CODE_SNIPPET_DIRECTORY = path.join(vim.fn.stdpath("config"), "snippets")
+M.NVIM_LINT_DIR = path.join(vim.fn.stdpath("config"), "lint")
+M.DATABASE_CONFIG = {
     {
         name = "dev",
         url = "mysql://askfiy@192.168.0.120/db1"
@@ -22,12 +17,16 @@ vim.g.dbs = {
         url = "mysql://root@localhost:3306/test"
     }
 }
-
--- The extension relationship between code snippets and file types
-vim.g.vsnip_filetypes = {
-    ["javascript"] = {"typescript"},
-    ["typescript"] = {"javascript"},
-    ["vue"] = {"javascript", "typescript"},
-    ["html"] = {},
-    ["python"] = {}
+M.CODE_SNIPPET_FILETYPES = {
+    javascript = {"typescript"},
+    typescript = {"javascript"},
+    vue = {"javascript", "typescript"},
+    html = {},
+    python = {}
 }
+
+vim.g.vsnip_snippet_dir = M.CODE_SNIPPET_DIRECTORY
+vim.g.vsnip_filetypes = M.CODE_SNIPPET_FILETYPES
+vim.g.dbs = M.DATABASE_CONFIG
+
+return M

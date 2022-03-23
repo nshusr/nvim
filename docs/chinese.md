@@ -33,7 +33,10 @@
 │   │   └── plugins
 │   │       └── ...
 │   ├── core
-│   │   ├── after.lua
+│   │   ├── after
+│   │   │   ├── filetype_load_snippet.lua
+│   │   │   ├── init.lua
+│   │   │   └── input_toggle.lua
 │   │   ├── keybinds.lua
 │   │   ├── options.lua
 │   │   ├── plugins.lua
@@ -67,10 +70,10 @@
 - dap：存放各种语言 DAP 配置
 - lsp：存放各种语言 LSP 配置
 - plugins：存放各种插件配置
+- lua/core/after：存放所有配置加载完成后运行的脚本命令，如输入法切换与框架代码片段加载
 
 文件说明：
 
-- lua/core/after.lua：存放所有配置加载完成后运行的脚本命令，如输入法切换
 - lua/core/keybinds.lua：存放所有插件、个人配置的快捷键位配置
 - lua/core/options.lua：存放一些全局的个人、插件等配置
 - lua/core/settings.lua：存放所有 neovim 内置的配置选项
@@ -262,7 +265,9 @@ $ ~/.local/share/nvim/site/pack/packer/opt/cmp-tabnine/install.sh
 | i    | &lt;c-l&gt; | 选择 copilot 的当前建议                                                    | [copilot](https://github.com/github/copilot.vim) |
 | i    | &lt;a-[&gt; | 选择 copilot 的上一个建议                                                  | [copilot](https://github.com/github/copilot.vim) |
 | i    | &lt;a-]&gt; | 选择 copilot 的下一个建议                                                  | [copilot](https://github.com/github/copilot.vim) |
-| i    | &lt;c-[&gt; | 关闭 copilot 的建议                                                        | [copilot](https://github.com/github/copilot.vim) |
+| i    | &lt;c-]&gt; | 关闭 copilot 的建议                                                        | [copilot](https://github.com/github/copilot.vim) |
+
+注意，如果选择的建议是代码片段，可以通过 &lt;tab&gt; 和 &lt;s-tab&gt; 在 placeholder 中进行跳转。
 
 ![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121615483.gif)
 
@@ -446,7 +451,7 @@ $ yay -S repgrep
 
 [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) 插件中内置了一个范围选择的功能，在使用此插件前，你需要安装 [gcc](https://gcc.gnu.org/)。
 
-下面是我对它绑定的键位：
+下面是我对它绑定的键位（由于该功能不稳定，现在已被禁用，如果要开启请在 [nvim-treesitter](../lua/configure/plugins/nvim-treesitter.lua) 中打开）：
 
 | 模式 | 键位        | 说明         | 插件                                                                  |
 | ---- | ----------- | ------------ | --------------------------------------------------------------------- |

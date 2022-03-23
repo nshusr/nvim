@@ -7,23 +7,23 @@
 -- With these tools, you can call deepl's api
 -- https://www.deepl.com/en/docs-api/
 
-local options = {
-    default = {
-        -- default: translate_shell
-        -- deepl_free
-        -- deepl_pro
-        command = "translate_shell",
-        output = "floating",
-        parse_before = "trim",
-        parse_after = "no_handle",
-    },
-    preset = {
-        output = {
-            split = {
-                min_size = 8
+require("translate").setup(
+    {
+        default = {
+            -- default: translate_shell
+            -- deepl_free
+            -- deepl_pro
+            command = "translate_shell",
+            output = "floating",
+            parse_before = "trim",
+            parse_after = "no_handle"
+        },
+        preset = {
+            output = {
+                split = {
+                    min_size = 8
+                }
             }
         }
     }
-}
-
-require("translate").setup(options)
+)

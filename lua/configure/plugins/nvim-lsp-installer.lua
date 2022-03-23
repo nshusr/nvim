@@ -1,9 +1,11 @@
 -- https://github.com/williamboman/nvim-lsp-installer
 
+local keybinds = require("core.keybinds")
+
 local lsp_installer_servers = require("nvim-lsp-installer.servers")
 
 -- use cmp_nvim_lsp instead of built-in omnifunc for a stronger completion experience
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- WARN: lsp install manually write lsp configuration files
 
@@ -26,7 +28,7 @@ local servers = {
 
 local function attach(client, bufnr)
     require("aerial").on_attach(client, bufnr)
-    vim.u.keymap.func.register_buffer_key("nvim_lsp_installer")
+    keybinds.fn.register_buffer_key("nvim_lsp_installer", bufnr)
 end
 
 -- automatically install or start LanguageServers

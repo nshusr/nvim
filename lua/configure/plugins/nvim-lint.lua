@@ -5,8 +5,9 @@
 -- pip3 install pylint
 -- npm install -g eslint
 -- ...
+local options = require("core.options")
 
-local utils = require("tools.utils")
+local path = require("tools.path")
 
 require("lint").linters_by_ft = {
     python = {"pylint"}
@@ -19,10 +20,8 @@ require("lint").linters_by_ft = {
 require("lint.linters.pylint").args = {
     "-f",
     "json",
-    "--rcfile=" .. utils.path.join(vim.u.nvim_lint_dir, "pylint.conf")
+    "--rcfile=" .. path.join(options.NVIM_LINT_DIR, "pylint.conf")
 }
-
-print(utils.path.join(vim.u.nvim_lint_dir, "pylint.conf"))
 
 vim.cmd([[
 au BufEnter * lua require('lint').try_lint()

@@ -1,9 +1,7 @@
 -- https://github.com/akinsho/toggleterm.nvim
 
 local toggleterm = require("toggleterm")
-local keymap_func = vim.u.keymap.func
-local keymap_opts = vim.u.keymap.opts
-local toggleterm_key = vim.u.keymap.plugin_set_key.toggleterm
+local keybinds = require("core.keybinds")
 
 toggleterm.setup(
     {
@@ -22,7 +20,7 @@ local function inInsert()
     -- enter insert mode
     vim.cmd("startinsert")
     -- unmap esc
-    keymap_func.delete_keymap("t", toggleterm_key.delete_all_exit)
+    keybinds.fn.del_global_keymap("t", keybinds.mapping.plugin.toggleterm.delete_all_exit)
 end
 
 -- create float term
@@ -36,17 +34,22 @@ local float_term =
         },
         on_open = function(term)
             inInsert()
-            keymap_func.buffer_set_keymap(
+            keybinds.fn.set_buffer_keymap(
                 term.bufnr,
                 "t",
-                toggleterm_key.float.float_exit,
+                keybinds.mapping.plugin.toggleterm.float.float_exit,
                 "<c-\\><c-n>:close<cr>",
-                keymap_opts.ntst
+                keybinds.opts.ntst
             )
         end,
         on_close = function()
             -- remap esc
-            keymap_func.global_set_keymap("t", toggleterm_key.float.again_exit, "<c-\\><c-n>", keymap_opts.ntst)
+            keybinds.fn.set_global_keymap(
+                "t",
+                keybinds.mapping.plugin.toggleterm.float.again_exit,
+                "<c-\\><c-n>",
+                keybinds.opts.ntst
+            )
         end
     }
 )
@@ -64,17 +67,22 @@ local lazy_git =
         on_open = function(term)
             inInsert()
             -- q in lazygit is quit
-            keymap_func.buffer_set_keymap(
+            keybinds.fn.set_buffer_keymap(
                 term.bufnr,
                 "i",
-                toggleterm_key.lazygit.lazygit_exit,
+                keybinds.mapping.plugin.toggleterm.lazygit.lazygit_exit,
                 "<cmd>close<cr>",
-                keymap_opts.ntst
+                keybinds.opts.ntst
             )
         end,
         on_close = function()
             -- remap esc
-            keymap_func.global_set_keymap("t", toggleterm_key.lazygit.again_exit, "<c-\\><c-n>", keymap_opts.ntst)
+            keybinds.fn.set_global_keymap(
+                "t",
+                keybinds.mapping.plugin.toggleterm.lazygit.again_exit,
+                "<c-\\><c-n>",
+                keybinds.opts.ntst
+            )
         end
     }
 )

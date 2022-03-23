@@ -1,65 +1,67 @@
 -- https://github.com/catppuccin/nvim
 
+local options = require("core.options")
+
 local catppuccin = require("catppuccin")
 
-local options = {
-    -- transparent workspace background
-    transparent_background = vim.u.transparency_background,
-    -- use terminal color
-    term_color = false,
-    -- code style
-    styles = {
-        comments = "italic",
-        functions = "NONE",
-        keywords = "NONE",
-        strings = "NONE",
-        variables = "NONE"
-    },
-    -- unified plugins style
-    integrations = {
-        cmp = true,
-        gitsigns = true,
-        telescope = true,
-        which_key = true,
-        bufferline = true,
-        markdown = true,
-        ts_rainbow = true,
-        hop = true,
-        notify = true,
-        indent_blankline = {
-            enabled = true,
-            colored_indent_levels = false
+catppuccin.setup(
+    {
+        -- transparent workspace background
+        transparent_background = options.TRANSPARENCY_BACKGROUND,
+        -- use terminal color
+        term_color = false,
+        -- code style
+        styles = {
+            comments = "italic",
+            functions = "NONE",
+            keywords = "NONE",
+            strings = "NONE",
+            variables = "NONE"
         },
-        nvimtree = {
-            enabled = true,
-            show_root = false,
-            -- transparent NvimTree background
-            transparent_panel = vim.u.transparency_background
-        },
-        native_lsp = {
-            enabled = true,
-            virtual_text = {
-                errors = "italic",
-                hints = "italic",
-                warnings = "italic",
-                information = "italic"
+        -- unified plugins style
+        integrations = {
+            cmp = true,
+            gitsigns = true,
+            telescope = true,
+            which_key = true,
+            bufferline = true,
+            markdown = true,
+            ts_rainbow = true,
+            hop = true,
+            notify = true,
+            indent_blankline = {
+                enabled = true,
+                colored_indent_levels = false
             },
-            underlines = {
-                errors = "underline",
-                hints = "underline",
-                warnings = "underline",
-                information = "underline"
-            }
-        },
-        -- manual setting
-        lsp_saga = true
+            nvimtree = {
+                enabled = true,
+                show_root = false,
+                -- transparent NvimTree background
+                transparent_panel = options.TRANSPARENCY_BACKGROUND
+            },
+            native_lsp = {
+                enabled = true,
+                virtual_text = {
+                    errors = "italic",
+                    hints = "italic",
+                    warnings = "italic",
+                    information = "italic"
+                },
+                underlines = {
+                    errors = "underline",
+                    hints = "underline",
+                    warnings = "underline",
+                    information = "underline"
+                }
+            },
+            -- manual setting
+            lsp_saga = true
+        }
     }
-}
-
-catppuccin.setup(options)
+)
 
 catppuccin.after_loading = function()
-    if vim.u.transparency_background then
+    if options.TRANSPARENCY_BACKGROUND then
         -- lsp_signature
         vim.cmd([[
             highlight! NormalFloat guibg=NONE

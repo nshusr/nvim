@@ -1,9 +1,10 @@
 -- python3 -m pip install debugpy
+local options = require("core.options")
 
 return {
     adapters = {
         type = "executable",
-        command = vim.u.python_interpreter_path,
+        command = options.PYTHON_INTERPRETER_PATH,
         args = {"-m", "debugpy.adapter"}
     },
     configurations = {
@@ -24,7 +25,7 @@ return {
                 "runserver",
                 "127.0.0.1:8000",
                 "--noreload"
-            },
+            }
         }
     }
 }

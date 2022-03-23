@@ -1,10 +1,6 @@
 ---@diagnostic disable: undefined-global
 -- https://github.com/wbthomason/packer.nvim
-
-local scripts = require("tools.scripts")
-local utils = require("tools.utils")
-
-Packer_bootstrap = scripts.packer.auto_install_packer()
+local path = require("tools.path")
 
 local packer_install_plugins = {
     -------------
@@ -64,14 +60,12 @@ local packer_install_plugins = {
     {"hrsh7th/cmp-cmdline", after = "nvim-cmp"},
     -- sql completion
     {"kristijanhusak/vim-dadbod-completion", after = "nvim-cmp"},
-    -- spelling suggestions
-    {"f3fora/cmp-spell", after = "nvim-cmp"},
     -- provides code snippets in multiple languages
     {"rafamadriz/friendly-snippets", after = "nvim-cmp"},
     -- tabnine source that provides ai-based intelligent completion
     {"tzachar/cmp-tabnine", run = "./install.sh", after = "nvim-cmp", disable = false},
     -- git copilot is autocompleted
-    {"github/copilot.vim", load_file = true,  event = {"InsertCharPre"}, disable = false},
+    {"github/copilot.vim", load_file = true, disable = false},
     -------------
     ---- dap ----
     -------------
@@ -137,7 +131,7 @@ local packer_install_plugins = {
     -- function -
     -------------
     -- session manager
-    {"olimorris/persisted.nvim", load_file = true, module = "persisted"},
+    {"olimorris/persisted.nvim", load_file = true},
     -- deleting buffer does not affect existing layouts
     {"famiu/bufdelete.nvim", event = {"BufRead", "BufNewFile"}},
     -- supports the buffer bar for lsp status
@@ -189,6 +183,23 @@ packer.init(
     }
 )
 
+Packer_bootstrap =
+    (function()
+    local packer_install_path = path.join(vim.fn.stdpath("data"), "site/pack/packer/start/packer.nvim")
+    if vim.fn.empty(vim.fn.glob(packer_install_path)) > 0 then
+        return vim.fn.system(
+            {
+                "git",
+                "clone",
+                "--depth",
+                "1",
+                "https://github.com/wbthomason/packer.nvim",
+                packer_install_path
+            }
+        )
+    end
+end)()
+
 packer.startup(
     {
         function(use)
@@ -196,9 +207,9 @@ packer.startup(
                 if plugin.load_file then
                     local require_path
                     if plugin.as then
-                        require_path = utils.path.join("configure", "plugins", plugin.as)
+                        require_path = path.join("configure", "plugins", plugin.as)
                     else
-                        require_path = utils.path.join("configure", "plugins", string.match(plugin[1], "/([%w-_]+).?"))
+                        require_path = path.join("configure", "plugins", string.match(plugin[1], "/([%w-_]+).?"))
                     end
                     plugin.config = "require('" .. require_path .. "')"
                 end
@@ -218,11 +229,11 @@ packer.startup(
 
 vim.cmd(
     [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]]
+   augroup packer_user_config
+     autocmd!
+     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+   augroup end
+ ]]
 )
 
 return packer

@@ -33,7 +33,10 @@ Directory listing:
 │   │   └── plugins
 │   │       └── ...
 │   ├── core
-│   │   ├── after.lua
+│   │   ├── after
+│   │   │   ├── filetype_load_snippet.lua
+│   │   │   ├── init.lua
+│   │   │   └── input_toggle.lua
 │   │   ├── keybinds.lua
 │   │   ├── options.lua
 │   │   ├── plugins.lua
@@ -67,10 +70,10 @@ Three-level directory description:
 - dap: store DAP configuration in various languages
 - lsp: store LSP configurations in various languages
 - plugins: store various plugin configurations
+- lua/core/after: store all the script commands that are run after the configuration is loaded, such as input method switching and frame code fragment loading
 
 File Description:
 
-- lua/core/after.lua: store all the script commands that run after the configuration is loaded, such as input method switching
 - lua/core/keybinds.lua: store shortcut key configuration for all plugins and personal configuration
 - lua/core/options.lua: store some global personal, plug-in and other configurations
 - lua/core/settings.lua: stores all neovim built-in configuration options
@@ -260,7 +263,9 @@ The key settings are as follows:
 | i      | &lt;c-l&gt; | Select the current proposal for copilot                                                                                                                             | [copilot](https://github.com/github/copilot.vim) |
 | i      | &lt;a-[&gt; | Select the previous suggestion for copilot                                                                                                                          | [copilot](https://github.com/github/copilot.vim) |
 | i      | &lt;a-]&gt; | Select the next suggestion from copilot                                                                                                                             | [copilot](https://github.com/github/copilot.vim) |
-| i      | &lt;c-[&gt; | Suggestions for turning off copilot                                                                                                                                 | [copilot](https://github.com/github/copilot.vim) |
+| i      | &lt;c-]&gt; | Suggestions for turning off copilot                                                                                                                                 | [copilot](https://github.com/github/copilot.vim) |
+
+Note that if the selected suggestion is a code snippet, you can jump through the placeholder via &lt;tab&gt; and &lt;s-tab&gt; .
 
 ![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203121615483.gif)
 
@@ -442,9 +447,9 @@ The [vim-visual-multi](https://github.com/mg979/vim-visual-multi) plugin provide
 
 ### Range selection
 
-The [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin has a built-in range selection function. Before using this plugin, you need to install [gcc](https://gcc .gnu.org/).
+The [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin has a built-in range selection function. Before using this plugin, you need to install [gcc](https://gcc.gnu.org/).
 
-Here are the keys I bind to it:
+The following is the key I bind to it (due to the instability of this function, it is now disabled, if you want to enable it, please open it in [nvim-treesitter](../lua/configure/plugins/nvim-treesitter.lua) ):
 
 | Models | Keys        | Instructions                 | Plugins                                                               |
 | ------ | ----------- | ---------------------------- | --------------------------------------------------------------------- |

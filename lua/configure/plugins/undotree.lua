@@ -1,5 +1,9 @@
 -- https://github.com/mbbill/undotree
 
+local path = require("tools.path")
+
+vim.g.undotree_dir = path.join(vim.fn.stdpath("cache"), "undotree")
+
 vim.cmd(
     [[
 if has("persistent_undo")

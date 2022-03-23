@@ -10,23 +10,23 @@ local colors = {
     Misc = "#AB9DF2"
 }
 
-local options = {
-    handle = {
-        -- scroller color
-        color = colors.color
-    },
-    marks = {
-        -- diagnostics color, need lsp suppert
-        Search = {color = colors.Search},
-        Error = {color = colors.Error},
-        Warn = {color = colors.Warn},
-        Info = {color = colors.Info},
-        Hint = {color = colors.Hint},
-        Misc = {color = colors.Misc}
+require("scrollbar").setup(
+    {
+        handle = {
+            -- scroller color
+            color = colors.color
+        },
+        marks = {
+            -- diagnostics color, need lsp suppert
+            Search = {color = colors.Search},
+            Error = {color = colors.Error},
+            Warn = {color = colors.Warn},
+            Info = {color = colors.Info},
+            Hint = {color = colors.Hint},
+            Misc = {color = colors.Misc}
+        }
     }
-}
-
-require("scrollbar").setup(options)
+)
 
 -- in scroller highlight search color
 require("scrollbar.handlers.search").setup()

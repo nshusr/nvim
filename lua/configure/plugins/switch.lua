@@ -1,6 +1,6 @@
 -- https://github.com/AndrewRadev/switch.vim
 
-local utils = require("tools.utils")
+local str = require("tools.str")
 
 local switch_words = {
     -- status
@@ -37,7 +37,7 @@ for _, value in ipairs(switch_words) do
     local x, y = value[1], value[2]
     table.insert(save_words, value)
     table.insert(save_words, {string.upper(x), string.upper(y)})
-    table.insert(save_words, {utils.str.title(x), utils.str.title(y)})
+    table.insert(save_words, {str.title(x), str.title(y)})
 end
 
 vim.g.switch_custom_definitions = save_words
