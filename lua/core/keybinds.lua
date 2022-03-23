@@ -19,16 +19,16 @@ end
 local function register_global_key(mapping_name)
     local global_mapping = M.mapping.global[mapping_name]
     for _, keymap in ipairs(global_mapping) do
-        local opt = M.opts[keymap[4]]
-        set_global_keymap(keymap[1], keymap[2], keymap[3], opt)
+        local opts = M.opts[keymap[4]]
+        set_global_keymap(keymap[1], keymap[2], keymap[3], opts)
     end
 end
 
 local function register_buffer_key(mapping_name, bufnr)
     local buffer_mapping = M.mapping.buffer[mapping_name]
     for _, keymap in ipairs(buffer_mapping) do
-        local opt = M.opts[keymap[4]]
-        set_buffer_keymap(bufnr, keymap[1], keymap[2], keymap[3], opt)
+        local opts = M.opts[keymap[4]]
+        set_buffer_keymap(bufnr, keymap[1], keymap[2], keymap[3], opts)
     end
 end
 
