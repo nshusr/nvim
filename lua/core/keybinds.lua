@@ -75,7 +75,7 @@ M = {
             },
             vim_carbon_now_sh = {
                 {"v", "<leader>ch", ":CarbonNowSh<cr>", "ntst"},
-                {"n", "<leader>ch", ":CarbonNowSh<cr>", "ntst"}
+                {"n", "<leader>ch", "ggVG:CarbonNowSh<cr><c-o>", "ntst"}
             },
             vim_vsnip = {
                 {"i", "<tab>", "vsnip#jumpable(1)?'<Plug>(vsnip-jump-next)':'<tab>'", "etst"},
