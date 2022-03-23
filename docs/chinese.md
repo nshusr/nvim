@@ -47,7 +47,7 @@
 ├── README.md
 ├── resource
 │   └── ...
-└── snippet
+└── snippets
     └── ...
 ```
 

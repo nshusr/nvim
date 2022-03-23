@@ -47,7 +47,7 @@ Directory listing:
 ├── README.md
 ├── resource
 │   └── ...
-└── snippet
+└── snippets
     └── ...
 ```
 
