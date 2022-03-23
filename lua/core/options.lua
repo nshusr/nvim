@@ -3,7 +3,7 @@ local path = require("tools.path")
 M = {}
 
 M.PLATFORM_INFO = vim.bo.fileformat:upper()
-M.TRANSPARENCY_BACKGROUND = true
+M.TRANSPARENCY_BACKGROUND = false
 M.PYTHON_INTERPRETER_PATH = "/usr/bin/python3"
 M.CODE_SNIPPET_DIRECTORY = path.join(vim.fn.stdpath("config"), "snippets")
 M.NVIM_LINT_DIR = path.join(vim.fn.stdpath("config"), "lint")

@@ -133,23 +133,27 @@ Here are the basic keys:
 | Models | Keys             | Instructions                                |
 | ------ | ---------------- | ------------------------------------------- |
 | n      | \\\\             | close neovim                                |
-| n      | &lt;esc&gt;      | Turn off search heights                     |
+| n      | &lt;esc&gt;      | Turn off search highlighting                |
 | n      | H                | to the beginning of this line of characters |
 | n      | L                | to the end of this line of characters       |
-| n      | &lt;a-k&gt;      | Increase split screen height (horizontal)   |
-| n      | &lt;a-j&gt;      | Reduce split screen height (horizontal)     |
-| n      | &lt;a-h&gt;      | Increase split screen width (vertical)      |
-| n      | &lt;a-l&gt;      | Reduce split screen width (vertical)        |
+| n      | &lt;m-k&gt;      | Increase split screen height (horizontal）  |
+| n      | &lt;m-j&gt;      | Reduce split screen height (horizontal）    |
+| n      | &lt;m-h&gt;      | Increase the split screen width (vertical） |
+| n      | &lt;m-l&gt;      | Reduce the split screen width (vertical）   |
 | n      | &lt;leader&gt;cs | Toggle Spell Check                          |
 | n      | &lt;c-u&gt;      | Move up 10 lines                            |
 | n      | &lt;c-d&gt;      | Move down 10 lines                          |
 | v      | H                | to the beginning of this line of characters |
 | v      | L                | to the end of the line                      |
 | i      | jj               | exit insert mode                            |
-| i      | &lt;a-k&gt;      | cursor moves up                             |
-| i      | &lt;a-j&gt;      | cursor moves down                           |
-| i      | &lt;a-h&gt;      | Cursor moves left                           |
-| i      | &lt;a-l&gt;      | cursor moves right                          |
+| i      | &lt;m-k&gt;      | cursor moves up                             |
+| i      | &lt;m-j&gt;      | cursor moves down                           |
+| i      | &lt;m-h&gt;      | Cursor moves left                           |
+| i      | &lt;m-l&gt;      | cursor moves right                          |
+| c      | &lt;m-k&gt;      | previous history                            |
+| c      | &lt;m-j&gt;      | next history                                |
+| c      | &lt;m-h&gt;      | move cursor left                            |
+| c      | &lt;m-l&gt;      | move cursor right                           |
 | t      | &lt;esc&gt;      | exit insert mode for term                   |
 
 ### Function keys
