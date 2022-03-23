@@ -1,5 +1,6 @@
 local path = require("tools.path")
 
+-- Language: python Django template and Django snippets
 vim.g.LoadHtmlSnippets = function()
     local root_dir = vim.fn.getcwd()
     local dir_name = vim.fn.expand("%:p:h:t")
