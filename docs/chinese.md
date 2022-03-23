@@ -350,8 +350,8 @@ $ pip3 install sqlformat
 
 [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) 插件能让我们生成 jpg 格式的代码图片。
 
-| 模式 | 键位             | 说明         | 插件                                                                    |
-| ---- | ---------------- | ------------ | ----------------------------------------------------------------------- |
+| 模式 | 键位             | 说明         | 插件                                                                     |
+| ---- | ---------------- | ------------ | ------------------------------------------------------------------------ |
 | n    | &lt;leader&gt;ch | 生成代码图片 | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) |
 | v    | &lt;leader&gt;ch | 生成代码图片 | [vim_carbon_now_sh](https://github.com/kristijanhusak/vim-carbon-now-sh) |
 
@@ -491,6 +491,22 @@ $ yay -S repgrep
 
 请注意，如果您使用了一些欢迎屏幕插件，那么可能会和该插件产生冲突。
 
+### git
+
+[gitsigns](https://github.com/lewis6991/gitsigns.nvim/) 插件提供了一些 git 可视化操作。
+
+| 模式 | 键位           | 说明                           | 插件                                                    |
+| ---- | -------------- | ------------------------------ | ------------------------------------------------------- |
+| n    | [c             | 跳转到上一个 hunk              | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | ]c             | 跳转到下一个 hunk              | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | &lt;leader&gr; | 重置当前 hunk                  | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| v    | &lt;leader&gr; | 重置当前范围的 hunk            | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | &lt;leader&gR; | 重置当前 buffer 的 hunk        | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | &lt;leader&gh; | 查看提交记录                   | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | &lt;leader&gl; | 切换行的 blame 信息            | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | &lt;leader&gd; | 查看当前 buffer 的 delete 操作 | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n    | &lt;leader&gv; | 查看当前 buffer 的 diff 视图   | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+
 ### 其它按键
 
 [switch](https://github.com/AndrewRadev/switch.vim) 插件能够快速的让 true 变为 false，或者 false 变为 true。
@@ -608,4 +624,3 @@ $ python3 -m pip install debugpy
 ```
 $ pip3 install pylint
 ```
-

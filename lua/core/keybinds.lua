@@ -238,6 +238,17 @@ M = {
                 {"n", "<c-h>", "<C-v>h:VBox<CR>", "ntsf"},
                 {"v", "b", ":VBox<CR>", "ntsf"},
                 {"v", "f", ":VFill<CR>", "ntsf"}
+            },
+            gitsigns = {
+                {"n", "]c", "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", "etst"},
+                {"n", "[c", "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", "etst"},
+                {"n", "<leader>gr", ":Gitsigns reset_hunk<CR>", "ntst"},
+                {"v", "<leader>gr", ":Gitsigns reset_hunk<CR>", "ntst"},
+                {"n", "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>", "ntst"},
+                {"n", "<leader>gh", "<cmd>lua require'gitsigns'.blame_line{full=true}<CR>", "ntst"},
+                {"n", "<leader>gl", "<cmd>Gitsigns toggle_current_line_blame<CR>", "ntst"},
+                {"n", "<leader>gd", "<cmd>Gitsigns toggle_deleted<CR>", "ntst"},
+                {"n", "<leader>gv", "<cmd>Gitsigns diffthis<CR>", "ntst"}
             }
         },
         plugin = {

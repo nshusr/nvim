@@ -489,6 +489,22 @@ The [persisted](https://github.com/olimorris/persisted.nvim) plugin provides ses
 
 Note that if you are using some welcome screen plugins, there may be conflicts with that plugin.
 
+### git
+
+The [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) plugin provides some git visualization operations.
+
+| Modes | Keys           | Instructions                                    | Plugins                                                 |
+| ----- | -------------- | ----------------------------------------------- | ------------------------------------------------------- |
+| n     | [c             | Jump to previous hunk                           | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | ]c             | skip to next hunk                               | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | &lt;leader&gr; | reset current hunk                              | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| v     | &lt;leader&gr; | reset the hunk of the current scope             | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | &lt;leader&gR; | Reset the hunk of the current buffer            | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | &lt;leader&gh; | View Commit History                             | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | &lt;leader&gl; | toggle blame information for a line             | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | &lt;leader&gd; | View the delete operation of the current buffer | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+| n     | &lt;leader&gv; | View the diff view of the current buffer        | [gitsigns](https://github.com/lewis6991/gitsigns.nvim/) |
+
 ### Other keys
 
 The [switch](https://github.com/AndrewRadev/switch.vim) plugin can quickly change true to false, or false to true.

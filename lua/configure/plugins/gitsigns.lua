@@ -1,6 +1,6 @@
 -- https://github.com/lewis6991/gitsigns.nvim/
 
--- HACK: gitsigns plugins keymap
+local keybinds = require("core.keybinds")
 
 require("gitsigns").setup(
     {
@@ -11,6 +11,9 @@ require("gitsigns").setup(
             delete = {hl = "GitSignsDelete", text = "-", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn"},
             topdelete = {hl = "GitSignsDelete", text = "‾", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn"},
             changedelete = {hl = "GitSignsChange", text = "_", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn"}
-        }
+        },
+        on_attach = function(bufnr)
+            keybinds.fn.register_buffer_key("gitsigns", bufnr)
+        end
     }
 )
