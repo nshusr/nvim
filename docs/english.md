@@ -382,7 +382,7 @@ The &lt;leader&gt;f prefixes are all lookup related.
 
 [telescope](https://github.com/nvim-telescope/telescope.nvim) is able to fuzzy lookup some files.
 
-It has some external dependencies, you need to download and install [fd](https://github.com/sharkdp/fd) and ripgrep(https://github.com/BurntSushi/ripgrep):
+It has some external dependencies, you need to download and install [fd](https://github.com/sharkdp/fd) and [ripgrep](https://github.com/BurntSushi/ripgrep):
 
 Take Arch as an example:
 

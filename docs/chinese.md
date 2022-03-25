@@ -384,7 +384,7 @@ $ pip3 install sqlformat
 
 [telescope](https://github.com/nvim-telescope/telescope.nvim) 能够模糊查找一些文件。
 
-它有一些外部依赖，你需要下载安装 [fd](https://github.com/sharkdp/fd) 和 ripgrep(https://github.com/BurntSushi/ripgrep)：
+它有一些外部依赖，你需要下载安装 [fd](https://github.com/sharkdp/fd) 和 [ripgrep](https://github.com/BurntSushi/ripgrep)：
 
 以 Arch 为例：
 

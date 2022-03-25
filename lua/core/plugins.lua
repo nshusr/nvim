@@ -97,7 +97,7 @@ local packer_install_plugins = {
     -- lightweight status bar plugin
     {"nvim-lualine/lualine.nvim", load_file = true, after = {"nvim-gps", "gitsigns.nvim", "nvim-web-devicons"}},
     -- beautiful pop-ups
-    {"rcarriga/nvim-notify", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
+    {"rcarriga/nvim-notify", load_file = true, after = "impatient.nvim"},
     -- displays the scroll bar
     {"petertriho/nvim-scrollbar", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays the same word under the cursor
@@ -148,14 +148,14 @@ local packer_install_plugins = {
         "kyazdani42/nvim-tree.lua",
         load_file = true,
         cmd = {"NvimTreeToggle", "NvimTreeFindFile"},
-        after = {"nvim-web-devicons", "impatient.nvim"}
+        after = {"nvim-web-devicons"}
     },
     -- undo tree
     {"mbbill/undotree", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- fuzzy lookup
-    {"nvim-telescope/telescope.nvim", load_file = true, cmd = "Telescope", after = {"fd", "ripgrep", "impatient.nvim"}},
+    {"nvim-telescope/telescope.nvim", load_file = true, cmd = "Telescope", after = {"fd", "ripgrep"}},
     -- alternate
-    {"nvim-pack/nvim-spectre", load_file = true, after = {"ripgrep", "plenary.nvim", "impatient.nvim"}},
+    {"nvim-pack/nvim-spectre", load_file = true, after = {"ripgrep", "plenary.nvim"}},
     -- markdown preview
     {"davidgranstrom/nvim-markdown-preview", load_file = true, ft = "markdown", after = "impatient.nvim"},
     -- built-in terminal

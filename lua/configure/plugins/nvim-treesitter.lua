@@ -25,16 +25,17 @@ require("nvim-treesitter.configs").setup(
         indent = {
             enable = false
         },
+        -- nvim-ts-context-commentstring
+        context_commentstring = {
+            enable = true
+        },
         -- nvim-ts-rainbow
         rainbow = {
             enable = true,
             extended_mode = true
-        },
-        -- nvim-ts-context-commentstring
-        context_commentstring = {
-            enable = true
         }
     }
 )
 
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.o.foldmethod = "expr"
+-- vim.o.foldexpr = "nvim_treesitter#foldexpr()"
