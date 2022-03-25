@@ -36,3 +36,4 @@ root_dir/!
 file_name
 py
 django
+SerializerMethodField

@@ -10,23 +10,25 @@ local packer_install_plugins = {
     {"wbthomason/packer.nvim"},
     -- optimized startup speed
     {"lewis6991/impatient.nvim", load_file = true},
+    -- speed up startup
+    {"nathom/filetype.nvim", load_file = true},
     -- icon support
     {"kyazdani42/nvim-web-devicons", after = "impatient.nvim"},
     -- chinese documentation
-    {"yianwillis/vimcdoc", event = {"BufRead", "BufNewFile"}},
+    {"yianwillis/vimcdoc", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- lua dependency
-    {"nvim-lua/plenary.nvim", event = {"BufRead", "BufNewFile"}},
+    {"nvim-lua/plenary.nvim", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- character lookup
-    {"BurntSushi/ripgrep", event = {"BufRead", "BufNewFile"}},
+    {"BurntSushi/ripgrep", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- file lookup
-    {"sharkdp/fd", event = {"BufRead", "BufNewFile"}},
+    {"sharkdp/fd", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -------------
     ---- lsp ----
     -------------
     -- lsp base plug-in
-    {"neovim/nvim-lspconfig", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"neovim/nvim-lspconfig", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- view tree
-    {"stevearc/aerial.nvim", load_file = true, after = {"nvim-web-devicons", "nvim-lspconfig"}},
+    {"stevearc/aerial.nvim", load_file = true, after = {"nvim-web-devicons", "nvim-lsp-installer", "impatient.nvim"}},
     -- replace the built-in omnifunc completion to get more completion
     {"hrsh7th/cmp-nvim-lsp", after = {"nvim-web-devicons", "nvim-lspconfig"}},
     -- download lsp automatically
@@ -45,9 +47,9 @@ local packer_install_plugins = {
     -- complete -
     -------------
     -- vsnip engine for code snippet support
-    {"hrsh7th/vim-vsnip", event = {"InsertEnter", "CmdlineEnter"}},
+    {"hrsh7th/vim-vsnip", event = {"InsertEnter", "CmdlineEnter"}, after = "impatient.nvim"},
     -- adds a vscode-like icon for completion
-    {"onsails/lspkind-nvim", event = {"InsertEnter", "CmdlineEnter"}},
+    {"onsails/lspkind-nvim", event = {"InsertEnter", "CmdlineEnter"}, after = "impatient.nvim"},
     -- code completion
     {"hrsh7th/nvim-cmp", load_file = true, after = {"lspkind-nvim", "vim-vsnip"}},
     -- source of code snippets for vsnip
@@ -70,7 +72,7 @@ local packer_install_plugins = {
     ---- dap ----
     -------------
     -- code debugging basic plugin
-    {"mfussenegger/nvim-dap", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"mfussenegger/nvim-dap", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- provides inline text for code debugging
     {"theHamsta/nvim-dap-virtual-text", load_file = true, after = "nvim-dap"},
     -- provides a ui interface for code debugging
@@ -79,99 +81,109 @@ local packer_install_plugins = {
     --- theme ---
     -------------
     -- excellent dark theme
-    {"catppuccin/nvim", as = "catppuccin", disable = false, load_file = true},
+    {"catppuccin/nvim", as = "catppuccin", disable = false, load_file = true, after = "impatient.nvim"},
     -- high contrast theme
-    {"sainnhe/sonokai", disable = true, load_file = true},
+    {"sainnhe/sonokai", disable = true, load_file = true, after = "impatient.nvim"},
     -- provides a default highlighting scheme for themes that do not support lsp highlighting
-    {"folke/lsp-colors.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"folke/lsp-colors.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- syntax highlighting
-    {"nvim-treesitter/nvim-treesitter", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"nvim-treesitter/nvim-treesitter", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- rainbow parentheses
-    {"p00f/nvim-ts-rainbow", event = {"BufRead", "BufNewFile"}},
+    {"p00f/nvim-ts-rainbow", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- provides contextual information for the status bar
-    {"SmiteshP/nvim-gps", after = "nvim-treesitter"},
+    {"SmiteshP/nvim-gps", after = {"nvim-treesitter", "impatient.nvim"}},
     -- git plugin
     {"lewis6991/gitsigns.nvim", load_file = true, after = {"nvim-treesitter", "plenary.nvim"}},
     -- lightweight status bar plugin
     {"nvim-lualine/lualine.nvim", load_file = true, after = {"nvim-gps", "gitsigns.nvim", "nvim-web-devicons"}},
     -- beautiful pop-ups
-    {"rcarriga/nvim-notify", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"rcarriga/nvim-notify", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays the scroll bar
-    {"petertriho/nvim-scrollbar", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"petertriho/nvim-scrollbar", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays the same word under the cursor
-    {"RRethy/vim-illuminate", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"RRethy/vim-illuminate", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -------------
     --- code ----
     -------------
     -- comment dependencies
-    {"JoosepAlviste/nvim-ts-context-commentstring", event = {"BufRead", "BufNewFile"}},
+    {"JoosepAlviste/nvim-ts-context-commentstring", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- code comments
     {"numToStr/Comment.nvim", load_file = true, after = "nvim-ts-context-commentstring"},
     -- code formatting
-    {"sbdchd/neoformat", load_file = true, cmd = "Neoformat"},
+    {"sbdchd/neoformat", load_file = true, cmd = "Neoformat", after = "impatient.nvim"},
     -- quickly change words
-    {"AndrewRadev/switch.vim", load_file = true, cmd = "Switch"},
+    {"AndrewRadev/switch.vim", load_file = true, cmd = "Switch", after = "impatient.nvim"},
     -- python indentation
-    {"Vimjas/vim-python-pep8-indent", ft = "python"},
+    {"Vimjas/vim-python-pep8-indent", ft = "python", after = "impatient.nvim"},
     -- emmet abbreviation
-    {"mattn/emmet-vim", ft = {"html", "javascript", "typescript", "vue", "xml"}},
+    {"mattn/emmet-vim", ft = {"html", "javascript", "typescript", "vue", "xml"}, after = "impatient.nvim"},
     -- sql linking base plugin
-    {"tpope/vim-dadbod", cmd = "DBUIToggle"},
+    {"tpope/vim-dadbod", cmd = "DBUIToggle", after = "impatient.nvim"},
     -- sql link ui plugin
     {"kristijanhusak/vim-dadbod-ui", load_file = true, after = "vim-dadbod"},
     -- package modification
-    {"ur4ltz/surround.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"ur4ltz/surround.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- automatically matches parentheses
-    {"windwp/nvim-autopairs", load_file = true, event = "InsertEnter"},
+    {"windwp/nvim-autopairs", load_file = true, event = "InsertEnter", after = "impatient.nvim"},
     -- todo tree
-    {"folke/todo-comments.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"folke/todo-comments.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays indentation lines
-    {"lukas-reineke/indent-blankline.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        load_file = true,
+        event = {"BufRead", "BufNewFile"},
+        after = "impatient.nvim"
+    },
     -------------
     -- function -
     -------------
     -- session manager
-    {"olimorris/persisted.nvim", load_file = true},
+    {"olimorris/persisted.nvim", load_file = true, after = "impatient.nvim"},
     -- deleting buffer does not affect existing layouts
-    {"famiu/bufdelete.nvim", event = {"BufRead", "BufNewFile"}},
+    {"famiu/bufdelete.nvim", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- supports the buffer bar for lsp status
     {"akinsho/bufferline.nvim", load_file = true, after = {"nvim-web-devicons", "bufdelete.nvim"}},
     -- file tree
-    {"kyazdani42/nvim-tree.lua", load_file = true, cmd = {"NvimTreeToggle", "NvimTreeFindFile"}},
+    {
+        "kyazdani42/nvim-tree.lua",
+        load_file = true,
+        cmd = {"NvimTreeToggle", "NvimTreeFindFile"},
+        after = {"nvim-web-devicons", "impatient.nvim"}
+    },
     -- undo tree
-    {"mbbill/undotree", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"mbbill/undotree", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- fuzzy lookup
-    {"nvim-telescope/telescope.nvim", load_file = true, cmd = "Telescope"},
+    {"nvim-telescope/telescope.nvim", load_file = true, cmd = "Telescope", after = {"fd", "ripgrep", "impatient.nvim"}},
     -- alternate
-    {"nvim-pack/nvim-spectre", load_file = true, after = {"ripgrep", "plenary.nvim"}},
+    {"nvim-pack/nvim-spectre", load_file = true, after = {"ripgrep", "plenary.nvim", "impatient.nvim"}},
     -- markdown preview
-    {"davidgranstrom/nvim-markdown-preview", load_file = true, ft = "markdown"},
+    {"davidgranstrom/nvim-markdown-preview", load_file = true, ft = "markdown", after = "impatient.nvim"},
     -- built-in terminal
-    {"akinsho/toggleterm.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"akinsho/toggleterm.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- multi-cursor mode
-    {"mg979/vim-visual-multi", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"mg979/vim-visual-multi", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- auto save
-    {"Pocco81/AutoSave.nvim", load_file = true, event = {"TextChanged", "TextChangedI"}},
+    {"Pocco81/AutoSave.nvim", load_file = true, event = {"TextChanged", "TextChangedI"}, after = "impatient.nvim"},
     -- automatically restores the cursor position
-    {"ethanholz/nvim-lastplace", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"ethanholz/nvim-lastplace", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays entries when searching
-    {"kevinhwang91/nvim-hlslens", event = {"BufRead", "BufNewFile"}},
+    {"kevinhwang91/nvim-hlslens", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays the web color
-    {"norcalli/nvim-colorizer.lua", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"norcalli/nvim-colorizer.lua", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- quick jumps
-    {"phaazon/hop.nvim", load_file = true, cmd = {"HopWord", "HopLine", "HopChar1"}},
+    {"phaazon/hop.nvim", load_file = true, cmd = {"HopWord", "HopLine", "HopChar1"}, after = "impatient.nvim"},
     -- spell checker
-    {"lewis6991/spellsitter.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"lewis6991/spellsitter.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- key binder
-    {"folke/which-key.nvim", load_file = true, event = {"BufRead", "BufNewFile"}},
+    {"folke/which-key.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- translation plugins
-    {"uga-rosa/translate.nvim", load_file = true, cmd = "Translate", disable = false},
+    {"uga-rosa/translate.nvim", load_file = true, cmd = "Translate", after = "impatient.nvim"},
     -- drawing tools
-    {"jbyuki/venn.nvim", load_file = true, event = "FuncUndefined"},
+    {"jbyuki/venn.nvim", load_file = true, event = "FuncUndefined", after = "impatient.nvim"},
     -- long screenshot of the code
-    {"kristijanhusak/vim-carbon-now-sh", cmd = "CarbonNowSh"},
+    {"kristijanhusak/vim-carbon-now-sh", cmd = "CarbonNowSh", after = "impatient.nvim"},
     -- query the startup time
-    {"dstein64/vim-startuptime", cmd = "StartupTime"}
+    {"dstein64/vim-startuptime", cmd = "StartupTime", after = "impatient.nvim"}
 }
 
 local packer = require("packer")

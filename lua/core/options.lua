@@ -25,6 +25,7 @@ M.CODE_SNIPPET_FILETYPES = {
     python = {}
 }
 
+-- plugin settings
 vim.g.vsnip_snippet_dir = M.CODE_SNIPPET_DIRECTORY
 vim.g.vsnip_filetypes = M.CODE_SNIPPET_FILETYPES
 vim.g.dbs = M.DATABASE_CONFIG
