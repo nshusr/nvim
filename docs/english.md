@@ -6,7 +6,7 @@ This is a neovim configuration project that I use, all written in Lua language, 
 
 It starts up really fast because I lazy load 90% of my plugins:
 
-<img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102201493.png"/>
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203252145037.png)
 
 I will keep updating the configuration here to make it more and more user-friendly.
 

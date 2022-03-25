@@ -6,7 +6,7 @@
 
 它的启动速度非常快，因为我对 90% 的插件都做了 lazy load：
 
-<img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203102201493.png"  />
+![](https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/202203252145037.png)
 
 我会不断更新这里的配置，让它变得越来越人性化。
 
