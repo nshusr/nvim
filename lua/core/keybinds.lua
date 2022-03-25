@@ -118,11 +118,36 @@ M = {
                 }
             },
             telescope = {
-                {"n", "<leader>ff", "<cmd>Telescope find_files theme=dropdown<cr>", "ntst"},
-                {"n", "<leader>fg", "<cmd>Telescope live_grep theme=dropdown<cr>", "ntst"},
-                {"n", "<leader>fo", "<cmd>Telescope oldfiles theme=dropdown<cr>", "ntst"},
-                {"n", "<leader>fm", "<cmd>Telescope marks theme=dropdown<cr>", "ntst"},
-                {"n", "<leader>fh", "<cmd>Telescope resume theme=dropdown<cr>", "ntst"}
+                {
+                    "n",
+                    "<leader>ff",
+                    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>",
+                    "ntst"
+                },
+                {
+                    "n",
+                    "<leader>fg",
+                    "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>",
+                    "ntst"
+                },
+                {
+                    "n",
+                    "<leader>fo",
+                    "<cmd>lua require('telescope.builtin').oldfiles(require('telescope.themes').get_dropdown({}))<cr>",
+                    "ntst"
+                },
+                {
+                    "n",
+                    "<leader>fm",
+                    "<cmd>lua require('telescope.builtin').marks(require('telescope.themes').get_dropdown({}))<cr>",
+                    "ntst"
+                },
+                {
+                    "n",
+                    "<leader>fh",
+                    "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_dropdown({}))<cr>",
+                    "ntst"
+                }
             },
             persisted = {
                 {"n", "<leader>sl", ":SessionLoad<cr><cr>", "ntsf"},

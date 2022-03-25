@@ -72,7 +72,7 @@ local packer_install_plugins = {
     ---- dap ----
     -------------
     -- code debugging basic plugin
-    {"mfussenegger/nvim-dap", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
+    {"mfussenegger/nvim-dap", load_file = true, module = "dap", after = "impatient.nvim"},
     -- provides inline text for code debugging
     {"theHamsta/nvim-dap-virtual-text", load_file = true, after = "nvim-dap"},
     -- provides a ui interface for code debugging
@@ -156,15 +156,21 @@ local packer_install_plugins = {
     {
         "nvim-telescope/telescope.nvim",
         load_file = true,
-        cmd = "Telescope",
+        module = "telescope",
         after = {"fd", "ripgrep", "nvim-web-devicons"}
     },
     -- alternate
-    {"nvim-pack/nvim-spectre", load_file = true, after = {"ripgrep", "plenary.nvim"}},
+    {"nvim-pack/nvim-spectre", load_file = true, module = "spectre", after = {"ripgrep", "plenary.nvim"}},
     -- markdown preview
     {"davidgranstrom/nvim-markdown-preview", load_file = true, ft = "markdown", after = "impatient.nvim"},
     -- built-in terminal
-    {"akinsho/toggleterm.nvim", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
+    {
+        "akinsho/toggleterm.nvim",
+        load_file = true,
+        module = "toggleterm",
+        event = "CmdUndefined",
+        after = "impatient.nvim"
+    },
     -- multi-cursor mode
     {"mg979/vim-visual-multi", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- auto save
@@ -172,7 +178,7 @@ local packer_install_plugins = {
     -- automatically restores the cursor position
     {"ethanholz/nvim-lastplace", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- displays entries when searching
-    {"kevinhwang91/nvim-hlslens", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
+    {"kevinhwang91/nvim-hlslens", module = "hlslens", after = "impatient.nvim"},
     -- displays the web color
     {"norcalli/nvim-colorizer.lua", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- quick jumps
