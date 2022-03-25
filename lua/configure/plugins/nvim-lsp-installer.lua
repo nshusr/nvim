@@ -26,9 +26,26 @@ local servers = {
     vuels = require("configure.lsp.vuels")
 }
 
+local function disgnostic_settings()
+    -- diagnostic style customization
+    vim.diagnostic.config(
+        {
+            virtual_text = {
+                prefix = "●",
+                source = "always"
+            },
+            float = {
+                source = "always"
+            },
+            update_in_insert = false
+        }
+    )
+end
+
 local function attach(client, bufnr)
     require("aerial").on_attach(client, bufnr)
     keybinds.fn.register_buffer_key("nvim_lsp_installer", bufnr)
+    disgnostic_settings()
 end
 
 -- automatically install or start LanguageServers

@@ -26,13 +26,13 @@ local packer_install_plugins = {
     ---- lsp ----
     -------------
     -- lsp base plug-in
-    {"neovim/nvim-lspconfig", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
+    {"neovim/nvim-lspconfig", event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- view tree
-    {"stevearc/aerial.nvim", load_file = true, after = {"nvim-web-devicons", "nvim-lsp-installer", "impatient.nvim"}},
+    {"stevearc/aerial.nvim", load_file = true, after = {"nvim-web-devicons", "nvim-lspconfig", "impatient.nvim"}},
     -- replace the built-in omnifunc completion to get more completion
     {"hrsh7th/cmp-nvim-lsp", after = {"nvim-web-devicons", "nvim-lspconfig"}},
     -- download lsp automatically
-    {"williamboman/nvim-lsp-installer", load_file = true, after = "cmp-nvim-lsp"},
+    {"williamboman/nvim-lsp-installer", load_file = true, after = {"cmp-nvim-lsp", "aerial.nvim"}},
     -- lsp progress prompts
     {"j-hui/fidget.nvim", load_file = true, after = "nvim-lsp-installer"},
     -- lsp ui beautification
@@ -153,7 +153,12 @@ local packer_install_plugins = {
     -- undo tree
     {"mbbill/undotree", load_file = true, event = {"BufRead", "BufNewFile"}, after = "impatient.nvim"},
     -- fuzzy lookup
-    {"nvim-telescope/telescope.nvim", load_file = true, cmd = "Telescope", after = {"fd", "ripgrep"}},
+    {
+        "nvim-telescope/telescope.nvim",
+        load_file = true,
+        cmd = "Telescope",
+        after = {"fd", "ripgrep", "nvim-web-devicons"}
+    },
     -- alternate
     {"nvim-pack/nvim-spectre", load_file = true, after = {"ripgrep", "plenary.nvim"}},
     -- markdown preview
@@ -187,13 +192,6 @@ local packer_install_plugins = {
 }
 
 local packer = require("packer")
-
-packer.init(
-    -- don't delete disabled plugins on sync
-    {
-        auto_clean = false
-    }
-)
 
 Packer_bootstrap =
     (function()
