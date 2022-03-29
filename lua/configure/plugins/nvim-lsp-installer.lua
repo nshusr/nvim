@@ -23,7 +23,6 @@ local servers = {
     gopls = require("configure.lsp.gopls"),
     jsonls = require("configure.lsp.jsonls"),
     zeta_note = require("configure.lsp.zeta_note"),
-    vuels = require("configure.lsp.vuels")
 }
 
 local function disgnostic_settings()

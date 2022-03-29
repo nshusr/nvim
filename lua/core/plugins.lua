@@ -147,7 +147,7 @@ local packer_install_plugins = {
     {
         "kyazdani42/nvim-tree.lua",
         load_file = true,
-        cmd = {"NvimTreeToggle", "NvimTreeFindFile"},
+        cmd = {"NvimTreeToggle", "NvimTreeFindFile", "NvimTreeFocus"},
         after = {"nvim-web-devicons"}
     },
     -- undo tree

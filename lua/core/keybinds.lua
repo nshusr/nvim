@@ -53,7 +53,7 @@ M = {
                 {"n", "\\\\", "<cmd>qa!<cr>", "ntst"},
                 {"n", "<esc>", ":nohlsearch<cr>", "ntst"},
                 {"t", "<esc>", "<c-\\><c-n>", "ntst"},
-                {"i", "jj", "<esc>", "ntst"},
+                {"i", "jk", "<esc>", "ntst"},
                 {"n", "H", "^", "ntst"},
                 {"v", "H", "^", "ntst"},
                 {"n", "L", "$", "ntst"},
@@ -95,7 +95,8 @@ M = {
             },
             nvim_tree = {
                 {"n", "<leader>1", "<cmd>NvimTreeToggle<cr>", "ntst"},
-                {"n", "<leader>fc", "<cmd>NvimTreeFindFile<cr>", "ntst"}
+                {"n", "<leader>e", "<cmd>NvimTreeFocus<cr>", "ntst"},
+                {"n", "<leader>fc", "<cmd>NvimTreeFindFile<cr>", "ntst"},
             },
             undotree = {
                 {"n", "<leader>3", ":UndotreeToggle<cr>", "ntst"}
