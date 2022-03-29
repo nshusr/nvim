@@ -4,9 +4,7 @@ local function set_global_keymap(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
 end
 
-local function del_global_keymap(mode, lhs)
-    vim.api.nvim_del_keymap(mode, lhs)
-end
+local function del_global_keymap(mode, lhs) vim.api.nvim_del_keymap(mode, lhs) end
 
 local function set_buffer_keymap(buffer, mode, lhs, rhs, opts)
     vim.api.nvim_buf_set_keymap(buffer, mode, lhs, rhs, opts)
@@ -53,14 +51,10 @@ M = {
                 {"n", "\\\\", "<cmd>qa!<cr>", "ntst"},
                 {"n", "<esc>", ":nohlsearch<cr>", "ntst"},
                 {"t", "<esc>", "<c-\\><c-n>", "ntst"},
-                {"i", "jk", "<esc>", "ntst"},
-                {"n", "H", "^", "ntst"},
-                {"v", "H", "^", "ntst"},
-                {"n", "L", "$", "ntst"},
-                {"v", "L", "$", "ntst"},
-                {"n", "<c-u>", "10k", "ntst"},
-                {"n", "<c-d>", "10j", "ntst"},
-                {"i", "<m-k>", "<up>", "ntst"},
+                {"i", "jk", "<esc>", "ntst"}, {"n", "H", "^", "ntst"},
+                {"v", "H", "^", "ntst"}, {"n", "L", "$", "ntst"},
+                {"v", "L", "$", "ntst"}, {"n", "<c-u>", "10k", "ntst"},
+                {"n", "<c-d>", "10j", "ntst"}, {"i", "<m-k>", "<up>", "ntst"},
                 {"i", "<m-j>", "<down>", "ntst"},
                 {"i", "<m-h>", "<left>", "ntst"},
                 {"i", "<m-l>", "<right>", "ntst"},
@@ -72,80 +66,79 @@ M = {
                 {"n", "<m-j>", "<cmd>res -1<cr>", "ntst"},
                 {"n", "<m-h>", "<cmd>vertical resize-1<cr>", "ntst"},
                 {"n", "<m-l>", "<cmd>vertical resize+1<cr>", "ntst"},
-                {"n", "<leader>cs", "<cmd>set spell!<cr>", "ntst"}
+                {"n", "<leader>cs", "<cmd>set spell!<cr>", "ntst"},
+                {"n", "<C-h>", "<c-w>h", "ntst"},
+                {"n", "<C-j>", "<c-w>j", "ntst"},
+                {"n", "<C-k>", "<c-w>k", "ntst"},
+                {"n", "<C-l>", "<c-w>l", "ntst"}
             },
-            neoformat = {
-                {"n", "<leader>cf", "<cmd>Neoformat<cr>", "ntst"}
-            },
+            neoformat = {{"n", "<leader>cf", "<cmd>Neoformat<cr>", "ntst"}},
             vim_carbon_now_sh = {
                 {"v", "<leader>ch", ":CarbonNowSh<cr>", "ntst"},
                 {"n", "<leader>ch", "ggVG:CarbonNowSh<cr><c-o>", "ntst"}
             },
             vim_vsnip = {
-                {"i", "<tab>", "vsnip#jumpable(1)?'<Plug>(vsnip-jump-next)':'<tab>'", "etst"},
-                {"i", "<s-tab>", "vsnip#jumpable(-1)?'<Plug>(vsnip-jump-prev)':'<s-tab>'", "etst"},
-                {"s", "<tab>", "vsnip#jumpable(1)? '<Plug>(vsnip-jump-next)':'<tab>'", "etst"},
-                {"s", "<s-tab>", "vsnip#jumpable(-1)?'<Plug>(vsnip-jump-prev)':'<s-tab>'", "etst"}
+                {
+                    "i", "<tab>",
+                    "vsnip#jumpable(1)?'<Plug>(vsnip-jump-next)':'<tab>'",
+                    "etst"
+                }, {
+                    "i", "<s-tab>",
+                    "vsnip#jumpable(-1)?'<Plug>(vsnip-jump-prev)':'<s-tab>'",
+                    "etst"
+                },
+                {
+                    "s", "<tab>",
+                    "vsnip#jumpable(1)? '<Plug>(vsnip-jump-next)':'<tab>'",
+                    "etst"
+                }, {
+                    "s", "<s-tab>",
+                    "vsnip#jumpable(-1)?'<Plug>(vsnip-jump-prev)':'<s-tab>'",
+                    "etst"
+                }
             },
-            switch = {
-                {"n", "gs", ":Switch<cr>", "ntst"}
-            },
-            copilot = {
-                {"i", "<c-l>", "copilot#Accept('')", "etst"}
-            },
+            switch = {{"n", "gs", ":Switch<cr>", "ntst"}},
+            copilot = {{"i", "<c-l>", "copilot#Accept('')", "etst"}},
             nvim_tree = {
                 {"n", "<leader>1", "<cmd>NvimTreeToggle<cr>", "ntst"},
                 {"n", "<leader>e", "<cmd>NvimTreeFocus<cr>", "ntst"},
-                {"n", "<leader>fc", "<cmd>NvimTreeFindFile<cr>", "ntst"},
+                {"n", "<leader>fc", "<cmd>NvimTreeFindFile<cr>", "ntst"}
             },
-            undotree = {
-                {"n", "<leader>3", ":UndotreeToggle<cr>", "ntst"}
-            },
-            vim_dadbod_ui = {
-                {"n", "<leader>4", ":DBUIToggle<cr>", "ntst"}
-            },
-            venn = {
-                {"n", "<leader>5", ":lua Toggle_venn()<cr>", "ntsf"}
-            },
+            undotree = {{"n", "<leader>3", ":UndotreeToggle<cr>", "ntst"}},
+            vim_dadbod_ui = {{"n", "<leader>4", ":DBUIToggle<cr>", "ntst"}},
+            venn = {{"n", "<leader>5", ":lua Toggle_venn()<cr>", "ntsf"}},
             todo_comments = {
-                {"n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<cr>", "ntst"}
+                {
+                    "n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<cr>",
+                    "ntst"
+                }
             },
             nvim_notify = {
                 {
-                    "n",
-                    "<leader>fn",
+                    "n", "<leader>fn",
                     "<cmd>lua require('telescope').extensions.notify.notify(require('telescope.themes').get_dropdown({}))<cr>",
                     "ntst"
                 }
             },
             telescope = {
                 {
-                    "n",
-                    "<leader>ff",
+                    "n", "<leader>ff",
                     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({}))<cr>",
                     "ntst"
-                },
-                {
-                    "n",
-                    "<leader>fg",
+                }, {
+                    "n", "<leader>fg",
                     "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_dropdown({}))<cr>",
                     "ntst"
-                },
-                {
-                    "n",
-                    "<leader>fo",
+                }, {
+                    "n", "<leader>fo",
                     "<cmd>lua require('telescope.builtin').oldfiles(require('telescope.themes').get_dropdown({}))<cr>",
                     "ntst"
-                },
-                {
-                    "n",
-                    "<leader>fm",
+                }, {
+                    "n", "<leader>fm",
                     "<cmd>lua require('telescope.builtin').marks(require('telescope.themes').get_dropdown({}))<cr>",
                     "ntst"
-                },
-                {
-                    "n",
-                    "<leader>fh",
+                }, {
+                    "n", "<leader>fh",
                     "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_dropdown({}))<cr>",
                     "ntst"
                 }
@@ -160,8 +153,11 @@ M = {
                 {"n", "<c-h>", "<cmd>BufferLineCyclePrev<cr>", "ntst"},
                 {"n", "<c-l>", "<cmd>BufferLineCycleNext<cr>", "ntst"},
                 {"n", "<leader>bh", "<cmd>BufferLineCloseLeft<cr>", "ntst"},
-                {"n", "<leader>bl", "<cmd>BufferLineCloseRight<cr>", "ntst"},
-                {"n", "<leader>bo", "<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr>", "ntst"},
+                {"n", "<leader>bl", "<cmd>BufferLineCloseRight<cr>", "ntst"}, {
+                    "n", "<leader>bo",
+                    "<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr>",
+                    "ntst"
+                },
                 {"n", "<leader>b1", "<cmd>BufferLineGoToBuffer 1<cr>", "ntst"},
                 {"n", "<leader>b2", "<cmd>BufferLineGoToBuffer 2<cr>", "ntst"},
                 {"n", "<leader>b3", "<cmd>BufferLineGoToBuffer 3<cr>", "ntst"},
@@ -179,30 +175,31 @@ M = {
                 {"n", "<leader>hc", "<cmd>HopChar1<cr>", "ntst"}
             },
             nvim_dap = {
-                {"n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "ntst"},
-                {"n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", "ntst"},
+                {
+                    "n", "<leader>db",
+                    "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "ntst"
+                },
+                {
+                    "n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>",
+                    "ntst"
+                },
                 {"n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", "ntst"},
                 {"n", "<F6>", "<cmd>lua require'dap'.step_into()<cr>", "ntst"},
                 {"n", "<F7>", "<cmd>lua require'dap'.step_over()<cr>", "ntst"},
                 {"n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", "ntst"},
-                {"n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", "ntst"},
-                {
-                    "n",
-                    "<F10>",
+                {"n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", "ntst"}, {
+                    "n", "<F10>",
                     "<cmd>lua require'dap'.close()<cr><cmd>lua require'dap.repl'.close()<cr><cmd>lua require'dapui'.close()<CR><cmd>DapVirtualTextForceRefresh<CR>",
                     "ntst"
                 }
             },
             nvim_hlslens = {
                 {
-                    "n",
-                    "n",
+                    "n", "n",
                     "<cmd>execute('normal!'.v:count1.'n')<cr><cmd>lua require('hlslens').start()<cr>",
                     "ntst"
-                },
-                {
-                    "n",
-                    "N",
+                }, {
+                    "n", "N",
                     "<cmd>execute('normal!'.v:count1.'N')<cr><cmd>lua require('hlslens').start()<cr>",
                     "ntst"
                 },
@@ -212,47 +209,121 @@ M = {
                 {"n", "g#", "g#<cmd>lua require('hlslens').start()<cr>", "ntst"}
             },
             nvim_spectre = {
-                {"n", "<leader>rp", "<cmd>lua require('spectre').open()<cr>", "ntst"},
-                {"n", "<leader>rf", "viw:lua require('spectre').open_file_search()<cr>", "ntst"},
-                {"n", "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "ntst"}
+                {
+                    "n", "<leader>rp", "<cmd>lua require('spectre').open()<cr>",
+                    "ntst"
+                }, {
+                    "n", "<leader>rf",
+                    "viw:lua require('spectre').open_file_search()<cr>", "ntst"
+                }, {
+                    "n", "<leader>rw",
+                    "<cmd>lua require('spectre').open_visual({select_word=true})<cr>",
+                    "ntst"
+                }
             },
             toggleterm = {
                 {"n", "<leader>tt", "<cmd>exe v:count.'ToggleTerm'<cr>", "ntst"},
-                {"n", "<leader>tf", "<cmd>lua require('toggleterm').float_toggle()<cr>", "ntst"},
-                {"n", "<leader>tg", "<cmd>lua require('toggleterm').lazygit_toggle()<cr>", "ntst"},
-                {"n", "<leader>ta", "<cmd>ToggleTermToggleAll<cr>", "ntst"}
+                {
+                    "n", "<leader>tf",
+                    "<cmd>lua require('toggleterm').float_toggle()<cr>", "ntst"
+                }, {
+                    "n", "<leader>tg",
+                    "<cmd>lua require('toggleterm').lazygit_toggle()<cr>",
+                    "ntst"
+                }, {"n", "<leader>ta", "<cmd>ToggleTermToggleAll<cr>", "ntst"},
+                {"t", "<C-h>", "<c-\\><c-n><c-w>h", "ntst"},
+                {"t", "<C-j>", "<c-\\><c-n><c-w>j", "ntst"},
+                {"t", "<C-k>", "<c-\\><c-n><c-w>k", "ntst"},
+                {"t", "<C-l>", "<c-\\><c-n><c-w>l", "ntst"}
             },
             translator = {
-                {"n", "<leader>tcs", ":<c-u>Translate ZH -source=EN -output=split<cr>", "ntst"},
-                {"x", "<leader>tcs", ":Translate ZH -source=EN -output=split<cr>", "ntst"},
-                {"n", "<leader>tcr", ":<c-u>Translate ZH -source=EN -output=replace<cr>", "ntst"},
-                {"x", "<leader>tcr", ":Translate ZH -source=EN -output=replace<cr>", "ntst"},
-                {"n", "<leader>tcf", ":<c-u>Translate ZH -source=EN -output=floating<cr>", "ntst"},
-                {"x", "<leader>tcf", ":Translate ZH -source=EN -output=floating<cr>", "ntst"},
-                {"n", "<leader>tci", ":<c-u>Translate ZH -source=EN -output=insert<cr>", "ntst"},
-                {"x", "<leader>tci", ":Translate ZH -source=EN -output=insert<cr>", "ntst"},
-                {"n", "<leader>tes", ":<c-u>Translate EN -source=ZH -output=split<cr>", "ntst"},
-                {"x", "<leader>tes", ":Translate EN -source=ZH -output=split<cr>", "ntst"},
-                {"n", "<leader>ter", ":<c-u>Translate EN -source=ZH -output=replace<cr>", "ntst"},
-                {"x", "<leader>ter", ":Translate EN -source=ZH -output=replace<cr>", "ntst"},
-                {"n", "<leader>tef", ":<c-u>Translate EN -source=ZH -output=floating<cr>", "ntst"},
-                {"x", "<leader>tef", ":Translate EN -source=ZH -output=floating<cr>", "ntst"},
-                {"n", "<leader>tei", ":<c-u>Translate EN -source=ZH -output=insert<cr>", "ntst"},
-                {"x", "<leader>tei", ":Translate EN -source=ZH -output=insert<cr>", "ntst"}
+                {
+                    "n", "<leader>tcs",
+                    ":<c-u>Translate ZH -source=EN -output=split<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tcs",
+                    ":Translate ZH -source=EN -output=split<cr>", "ntst"
+                }, {
+                    "n", "<leader>tcr",
+                    ":<c-u>Translate ZH -source=EN -output=replace<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tcr",
+                    ":Translate ZH -source=EN -output=replace<cr>", "ntst"
+                }, {
+                    "n", "<leader>tcf",
+                    ":<c-u>Translate ZH -source=EN -output=floating<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tcf",
+                    ":Translate ZH -source=EN -output=floating<cr>", "ntst"
+                }, {
+                    "n", "<leader>tci",
+                    ":<c-u>Translate ZH -source=EN -output=insert<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tci",
+                    ":Translate ZH -source=EN -output=insert<cr>", "ntst"
+                },
+                {
+                    "n", "<leader>tes",
+                    ":<c-u>Translate EN -source=ZH -output=split<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tes",
+                    ":Translate EN -source=ZH -output=split<cr>", "ntst"
+                }, {
+                    "n", "<leader>ter",
+                    ":<c-u>Translate EN -source=ZH -output=replace<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>ter",
+                    ":Translate EN -source=ZH -output=replace<cr>", "ntst"
+                }, {
+                    "n", "<leader>tef",
+                    ":<c-u>Translate EN -source=ZH -output=floating<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tef",
+                    ":Translate EN -source=ZH -output=floating<cr>", "ntst"
+                }, {
+                    "n", "<leader>tei",
+                    ":<c-u>Translate EN -source=ZH -output=insert<cr>", "ntst"
+                },
+                {
+                    "x", "<leader>tei",
+                    ":Translate EN -source=ZH -output=insert<cr>", "ntst"
+                }
             }
         },
         buffer = {
             nvim_lsp_installer = {
-                {"n", "gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", "ntst"},
-                {"n", "gr", "<cmd>Telescope lsp_references theme=dropdown<CR>", "ntst"},
-                {"n", "go", "<cmd>Telescope diagnostics theme=dropdown<CR>", "ntst"},
-                {"n", "gh", "<cmd>Lspsaga hover_doc<CR>", "ntst"},
+                {
+                    "n", "gd",
+                    "<cmd>Telescope lsp_definitions theme=dropdown<CR>", "ntst"
+                },
+                {
+                    "n", "gr",
+                    "<cmd>Telescope lsp_references theme=dropdown<CR>", "ntst"
+                },
+                {
+                    "n", "go", "<cmd>Telescope diagnostics theme=dropdown<CR>",
+                    "ntst"
+                }, {"n", "gh", "<cmd>Lspsaga hover_doc<CR>", "ntst"},
                 {"n", "[g", "<cmd>Lspsaga diagnostic_jump_prev<CR>", "ntst"},
-                {"n", "]g", "<cmd>Lspsaga diagnostic_jump_next<CR>", "ntst"},
-                {"n", "<c-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", "ntst"},
-                {"n", "<c-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", "ntst"},
-                {"n", "<leader>ca", "<cmd>Telescope lsp_code_actions theme=dropdown<CR>", "ntst"},
-                {"n", "<leader>cn", "<cmd>Lspsaga rename<CR>", "ntst"}
+                {"n", "]g", "<cmd>Lspsaga diagnostic_jump_next<CR>", "ntst"}, {
+                    "n", "<c-b>",
+                    "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>",
+                    "ntst"
+                }, {
+                    "n", "<c-f>",
+                    "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>",
+                    "ntst"
+                }, {
+                    "n", "<leader>ca",
+                    "<cmd>Telescope lsp_code_actions theme=dropdown<CR>", "ntst"
+                }, {"n", "<leader>cn", "<cmd>Lspsaga rename<CR>", "ntst"}
             },
             aerial = {
                 {"n", "<leader>2", "<cmd>AerialToggle! right<CR>", "none"},
@@ -270,21 +341,31 @@ M = {
                 {"v", "f", ":VFill<CR>", "ntsf"}
             },
             gitsigns = {
-                {"n", "]c", "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", "etst"},
-                {"n", "[c", "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", "etst"},
-                {"n", "<leader>gr", ":Gitsigns reset_hunk<CR>", "ntst"},
+                {
+                    "n", "]c", "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'",
+                    "etst"
+                },
+                {
+                    "n", "[c", "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'",
+                    "etst"
+                }, {"n", "<leader>gr", ":Gitsigns reset_hunk<CR>", "ntst"},
                 {"v", "<leader>gr", ":Gitsigns reset_hunk<CR>", "ntst"},
                 {"n", "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>", "ntst"},
-                {"n", "<leader>gh", "<cmd>lua require'gitsigns'.blame_line{full=true}<CR>", "ntst"},
-                {"n", "<leader>gl", "<cmd>Gitsigns toggle_current_line_blame<CR>", "ntst"},
+                {
+                    "n", "<leader>gh",
+                    "<cmd>lua require'gitsigns'.blame_line{full=true}<CR>",
+                    "ntst"
+                },
+                {
+                    "n", "<leader>gl",
+                    "<cmd>Gitsigns toggle_current_line_blame<CR>", "ntst"
+                },
                 {"n", "<leader>gd", "<cmd>Gitsigns toggle_deleted<CR>", "ntst"},
                 {"n", "<leader>gv", "<cmd>Gitsigns diffthis<CR>", "ntst"}
             }
         },
         plugin = {
-            lsp_signature = {
-                toggle_key = "<c-j>"
-            },
+            lsp_signature = {toggle_key = "<c-j>"},
             nvim_spectre = {
                 toggle_line = "dd",
                 select_entry = "<cr>",
@@ -306,40 +387,18 @@ M = {
                 remove_region = "<c-p>"
             },
             lspsaga = {
-                code_action_keys = {
-                    quit = "<esc>",
-                    exec = "<cr>"
-                },
-                rename_action_keys = {
-                    quit = "<esc>",
-                    exec = "<cr>"
-                }
+                code_action_keys = {quit = "<esc>", exec = "<cr>"},
+                rename_action_keys = {quit = "<esc>", exec = "<cr>"}
             },
             comment = {
-                toggle = {
-                    line = "gcc",
-                    block = "gCC"
-                },
-                opleader = {
-                    line = "gc",
-                    block = "gC"
-                },
-                extra = {
-                    above = "gcO",
-                    below = "gco",
-                    eol = "gcA"
-                }
+                toggle = {line = "gcc", block = "gCC"},
+                opleader = {line = "gc", block = "gC"},
+                extra = {above = "gcO", below = "gco", eol = "gcA"}
             },
             toggleterm = {
                 delete_all_exit = "<esc>",
-                lazygit = {
-                    lazygit_exit = "q",
-                    again_exit = "<esc>"
-                },
-                float = {
-                    float_exit = "<esc>",
-                    again_exit = "<esc>"
-                }
+                lazygit = {lazygit_exit = "q", again_exit = "<esc>"},
+                float = {float_exit = "<esc>", again_exit = "<esc>"}
             },
             nvim_treesitter = {
                 incremental_selection_keymaps = {
